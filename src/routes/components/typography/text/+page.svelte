@@ -1,5 +1,5 @@
 <script>
-  import { Text } from '$lib/ui-shared';
+  import { Text } from '$lib';
 </script>
 
 <h2>Numeric</h2>

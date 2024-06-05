@@ -1,0 +1,173 @@
+type NavItem = {
+  title: string;
+  link: string;
+  children?: NavItem[];
+};
+
+export const menu: NavItem[] = [
+  {
+    title: 'Components',
+    link: '/components',
+    children: [
+      {
+        title: 'Actions',
+        link: '/components/actions',
+        children: [
+          { title: 'Account connection', link: '/components/actions/account-connection' },
+          { title: 'Button', link: '/components/actions/button' },
+          { title: 'Button group', link: '/components/actions/button-group' },
+          { title: 'Page actions', link: '/components/actions/page-actions' },
+        ],
+      },
+      {
+        title: 'Layout and structure',
+        link: '/components/layout-and-structure',
+        children: [
+          { title: 'Bleed', link: '/components/layout-and-structure/bleed' },
+          { title: 'Block stack', link: '/components/layout-and-structure/block-stack' },
+          { title: 'Box', link: '/components/layout-and-structure/box' },
+          { title: 'Callout card', link: '/components/layout-and-structure/callout-card' },
+          { title: 'Card', link: '/components/layout-and-structure/card' },
+          { title: 'Divider', link: '/components/layout-and-structure/divider' },
+          { title: 'Empty state', link: '/components/layout-and-structure/empty-state' },
+          { title: 'Form layout', link: '/components/layout-and-structure/form-layout' },
+          { title: 'Grid', link: '/components/layout-and-structure/grid' },
+          { title: 'Inline grid', link: '/components/layout-and-structure/inline-grid' },
+          { title: 'Inline stack', link: '/components/layout-and-structure/inline-stack' },
+          { title: 'Layout', link: '/components/layout-and-structure/layout' },
+          { title: 'Media card', link: '/components/layout-and-structure/media-card' },
+          { title: 'Page', link: '/components/layout-and-structure/page' },
+        ],
+      },
+      {
+        title: 'Selection and input',
+        link: '/components/selection-and-input',
+        children: [
+          { title: 'Autocomplete', link: '/components/selection-and-input/autocomplete' },
+          { title: 'Checkbox', link: '/components/selection-and-input/checkbox' },
+          { title: 'Choice list', link: '/components/selection-and-input/choice-list' },
+          { title: 'Color picker', link: '/components/selection-and-input/color-picker' },
+          { title: 'Combobox', link: '/components/selection-and-input/combobox' },
+          { title: 'Date picker', link: '/components/selection-and-input/date-picker' },
+          { title: 'Drop zone', link: '/components/selection-and-input/drop-zone' },
+          { title: 'Filters', link: '/components/selection-and-input/filters' },
+          { title: 'Form', link: '/components/selection-and-input/form' },
+          { title: 'Index filters', link: '/components/selection-and-input/index-filters' },
+          { title: 'Inline error', link: '/components/selection-and-input/inline-error' },
+          { title: 'Radio button', link: '/components/selection-and-input/radio-button' },
+          { title: 'Range slider', link: '/components/selection-and-input/range-slider' },
+          { title: 'Select', link: '/components/selection-and-input/select' },
+          { title: 'Tag', link: '/components/selection-and-input/tag' },
+          { title: 'Text field', link: '/components/selection-and-input/text-field' },
+        ],
+      },
+      {
+        title: 'Images and icons',
+        link: '/components/images-and-icons',
+        children: [
+          { title: 'Avatar', link: '/components/images-and-icons/avatar' },
+          { title: 'Icon', link: '/components/images-and-icons/icon' },
+          { title: 'Keyboard key', link: '/components/images-and-icons/keyboard-key' },
+          { title: 'Thumbnail', link: '/components/images-and-icons/thumbnail' },
+          { title: 'Video thumbnail', link: '/components/images-and-icons/video-thumbnail' },
+        ],
+      },
+      {
+        title: 'Feedback indicators',
+        link: '/components/feedback-indicators',
+        children: [
+          { title: 'Badge', link: '/components/feedback-indicators/' },
+          { title: 'Banner', link: '/components/feedback-indicators/' },
+          { title: 'Exception list', link: '/components/feedback-indicators/' },
+          { title: 'Progress bar', link: '/components/feedback-indicators/' },
+          { title: 'Skeleton body text', link: '/components/feedback-indicators/' },
+          { title: 'Skeleton display text', link: '/components/feedback-indicators/' },
+          { title: 'Skeleton page', link: '/components/feedback-indicators/' },
+          { title: 'Skeleton tabs', link: '/components/feedback-indicators/' },
+          { title: 'Skeleton thumbnail', link: '/components/feedback-indicators/' },
+          { title: 'Spinner', link: '/components/feedback-indicators/' },
+        ],
+      },
+      {
+        title: 'Typography',
+        link: '/components/typography',
+        children: [{ title: 'Text', link: '/components/typography/text' }],
+      },
+      {
+        title: 'Tables',
+        link: '/components/tables',
+        children: [
+          { title: 'Data table', link: '/components/tables/' },
+          { title: 'Index table', link: '/components/tables/' },
+        ],
+      },
+      {
+        title: 'Lists',
+        link: '/components/lists/',
+        children: [
+          { title: 'Action list', link: '/components/lists/action-list' },
+          { title: 'Description list', link: '/components/lists/' },
+          { title: 'List', link: '/components/lists/' },
+          { title: 'Listbox', link: '/components/lists/' },
+          { title: 'Option list', link: '/components/lists/' },
+          { title: 'Resource item', link: '/components/lists/' },
+          { title: 'Resource list', link: '/components/lists/resource-list' },
+        ],
+      },
+      {
+        title: 'Navigation',
+        link: '/components/navigation',
+        children: [
+          { title: 'Footer help', link: '/components/navigation/' },
+          { title: 'Fullscreen bar', link: '/components/navigation/' },
+          { title: 'Link', link: '/components/navigation/' },
+          { title: 'Pagination', link: '/components/navigation/' },
+          { title: 'Tabs', link: '/components/navigation/tabs' },
+        ],
+      },
+      {
+        title: 'Overlays',
+        link: '/components/overlays/',
+        children: [
+          { title: 'Popover', link: '/components/overlays/' },
+          { title: 'Tooltip', link: '/components/overlays/tooltip' },
+        ],
+      },
+      {
+        title: 'Utilities',
+        link: '/components/utilities',
+        children: [
+          { title: 'App provider', link: '/components/utilities/' },
+          { title: 'Collapsible', link: '/components/utilities/' },
+          { title: 'Scrollable', link: '/components/utilities/' },
+        ],
+      },
+      {
+        title: 'Deprecated',
+        link: '',
+        children: [
+          { title: 'Caption', link: '' },
+          { title: 'Contextual save bar', link: '' },
+          { title: 'Display text', link: '' },
+          { title: 'Frame', link: '' },
+          { title: 'Heading', link: '' },
+          { title: 'Legacy card', link: '' },
+          { title: 'Legacy filters', link: '' },
+          { title: 'Legacy stack', link: '' },
+          { title: 'Legacy tabs', link: '' },
+          { title: 'Loading', link: '' },
+          { title: 'Modal', link: '' },
+          { title: 'Navigation', link: '' },
+          { title: 'Setting toggle', link: '' },
+          { title: 'Sheet', link: '' },
+          { title: 'Subheading', link: '' },
+          { title: 'Text container', link: '' },
+          { title: 'Text style', link: '' },
+          { title: 'Toast', link: '' },
+          { title: 'Top bar', link: '' },
+          { title: 'Visually hidden', link: '' },
+        ],
+      },
+    ],
+  },
+];

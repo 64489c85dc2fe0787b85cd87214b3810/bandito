@@ -85,7 +85,7 @@ export const menu: NavItem[] = [
           { title: 'Skeleton page', link: '/components/feedback-indicators/' },
           { title: 'Skeleton tabs', link: '/components/feedback-indicators/' },
           { title: 'Skeleton thumbnail', link: '/components/feedback-indicators/' },
-          { title: 'Spinner', link: '/components/feedback-indicators/' },
+          { title: 'Spinner', link: '/components/feedback-indicators/spinner' },
         ],
       },
       {

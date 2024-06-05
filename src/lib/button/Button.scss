@@ -151,9 +151,7 @@
   --pc-button-color_active: var(--p-color-text-link-active);
 }
 
-.mf-button--variantPlain:is(:hover, :active, :focus-visible):not(
-    .mf-button--removeUnderline
-  ) {
+.mf-button--variantPlain:is(:hover, :active, :focus-visible):not(.mf-button--removeUnderline) {
   text-decoration: underline;
 }
 
@@ -313,10 +311,7 @@
   --pc-button-icon-fill_disabled: var(--p-color-icon-disabled);
 }
 
-.mf-button--iconOnly:is(
-    .mf-button--variantPlain,
-    .mf-button--variantMonochromePlain
-  ) {
+.mf-button--iconOnly:is(.mf-button--variantPlain, .mf-button--variantMonochromePlain) {
   --pc-button-padding-block: 0;
   --pc-button-padding-inline: 0;
   margin: 0;
@@ -324,17 +319,11 @@
   min-width: var(--p-width-500);
 }
 
-.mf-button--iconWithText:not(
-    .mf-button--variantPlain,
-    .mf-button--variantMonochromePlain
-  ) {
+.mf-button--iconWithText:not(.mf-button--variantPlain, .mf-button--variantMonochromePlain) {
   padding-left: calc(var(--pc-button-padding-inline) * 0.5);
 }
 
-.mf-button--disclosure:not(
-    .mf-button--variantPlain,
-    .mf-button--variantMonochromePlain
-  ) {
+.mf-button--disclosure:not(.mf-button--variantPlain, .mf-button--variantMonochromePlain) {
   padding-right: calc(var(--pc-button-padding-inline) * 0.5);
 }
 

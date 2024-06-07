@@ -24,9 +24,9 @@ $size: (
   }
   $set: map.get($size, $name);
 
-  font-size: list.nth($set, 1);
-  line-height: list.nth($set, 2);
-  letter-spacing: list.nth($set, 3);
+  // font-size: list.nth($set, 1);
+  // line-height: list.nth($set, 2);
+  // letter-spacing: list.nth($set, 3);
 }
 
 @include text('base');

@@ -65,11 +65,15 @@
     display: flex;
     align-items: center;
     gap: var(--mf-spacing-1);
+    border-radius: var(--mf-radius-1);
+    padding: var(--mf-spacing-1);
+  }
+
+  .mf-nav__link:hover {
+    background-color: red;
   }
 
   .mf-nav__link--active {
     background-color: var(--mf-primary-color);
-    border-radius: var(--mf-radius-1);
-    padding: var(--mf-spacing-1);
   }
 </style>

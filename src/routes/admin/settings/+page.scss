@@ -1,6 +1,8 @@
+:root {
+  --mf-color-bg: #121212;
+  --mf-secondary-bg: #27272a;
+}
+
 body {
-  background-color: #060713;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: var(--mf-color-bg);
 }

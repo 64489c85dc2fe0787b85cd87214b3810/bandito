@@ -1,0 +1,28 @@
+$size: (
+  // [name]: [font-size] [line-height] [letter-spacing]
+  xs: 12px 16px 0,
+  sm: 14px 20px 0,
+  base: 16px 24px 0,
+  lg: 18px 28px 0,
+  xl: 20px 28px 0,
+  2xl: 24px 32px 0,
+  3xl: 30px 36px 0,
+  4xl: 36px 40px 0,
+  5xl: 48px 1 0,
+  6xl: 60px 1 0,
+  7xl: 72px 1 0,
+  8xl: 96px 1 0,
+  9xl: 128px 1 0
+);
+
+// $alignment: (
+//   left: left,
+//   cen
+// )
+
+:root {
+}
+
+body {
+  background-color: blue;
+}

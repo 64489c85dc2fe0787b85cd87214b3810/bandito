@@ -1,128 +1,88 @@
 <script lang="ts">
-  import './+page.scss';
+  import '../+page.scss';
   import { Icon, Text } from '$lib';
   import { createNamespace } from '$lib/utils';
+  import Layout from '../lib/Layout.svelte';
+  import Nav from '../lib/Nav.svelte';
+  import Tabs from '../lib/Tabs.svelte';
 
   const [navName, bemNav] = createNamespace('nav');
   const [boxName, bemBox] = createNamespace('box');
   const [layoutName, bemLayout] = createNamespace('layout');
 
   /** @todo remove later */
-  const menu = {
-    common: {
+  const items = [
+    {
+      alias: 'common',
       name: 'Общие',
       active: true,
     },
-    management: {
+    {
+      alias: 'management',
       name: 'Пользователи и доступы',
     },
-    payment: {
+    {
+      alias: 'payment',
       name: 'Оплаты',
     },
-    order: {
+    {
+      alias: 'order',
       name: 'Оформление заказа',
     },
-    delivery: {
+    {
+      alias: 'delivery',
       name: 'Доставка',
     },
-    location: {
+    {
+      alias: 'location',
       name: 'Локации',
     },
-    domain: {
+    {
+      alias: 'domain',
       name: 'Домены',
     },
-    lang: {
+    {
+      alias: 'lang',
       name: 'Языки',
     },
-    privacy: {
+    {
+      alias: 'privacy',
       name: 'Политика безопасности',
     },
-    logs: {
+    {
+      alias: 'logs',
       name: 'Логи',
     },
-  };
+  ];
+
+  const tabs = [
+    { title: 'Вкладка 1', children: 'Содержимое первой вкладки' },
+    { title: 'Вкладка 2 содержит длинный текст', children: 'Содержимое второй вкладки' },
+    { title: 'Вкладка 3', children: 'Содержимое третьей вкладки' },
+    { title: 'Вкладка 3', children: 'Содержимое третьей вкладки' },
+    { title: 'Вкладка 3', children: 'Содержимое третьей вкладки' },
+  ];
 </script>
 
-<div class={layoutName}>
-  <nav class={navName}>
-    <ul class={bemNav('items')}>
-      {#each Object.entries(menu) as [key, item]}
-        {#if item.name !== ''}
-          <li class={bemNav('item')}>
-            <a href="#{key}" class={bemNav('link', { active: item?.active || false })}>
-              <Icon />
-              <Text>{item.name}</Text>
-            </a>
-          </li>
-        {/if}
-      {/each}
-    </ul>
-  </nav>
+<a href="/id/login">test</a>
+<Layout>
+  {#snippet aside()}
+    <Nav {items}></Nav>
+  {/snippet}
   <div class={boxName}>
     <Text as="h1">Общие</Text>
+
+    <Tabs {tabs}></Tabs>
   </div>
-</div>
+</Layout>
 
 <style lang="scss">
-  :root {
-    --mf-link-main-color: #ecedee;
-    --mf-link-secondary-color: #a1a1aa;
-    --mf-radius-1: 0.5rem;
-    --mf-spacing-1: 0.5rem;
-    --mf-gap-1: 1rem;
-  }
-
-  .mf-nav {
-    display: flex;
-    width: 18em;
-    border-radius: var(--mf-radius-1);
-    padding: var(--mf-spacing-1);
-  }
-
-  .mf-nav__items {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .mf-nav__link {
-    display: flex;
-    align-items: center;
-    gap: var(--mf-spacing-1);
-    border-radius: var(--mf-radius-1);
-    padding: var(--mf-spacing-1);
-    color: var(--mf-link-secondary-color);
-
-    &:hover {
-      background-color: var(--mf-secondary-bg);
-    }
-
-    &--active {
-      background-color: var(--mf-secondary-bg);
-      color: var(--mf-link-main-color);
-
-      &:hover {
-        background-color: var(--mf-secondary-bg);
-      }
-    }
-  }
-
-  /** Layout el */
-  .mf-layout {
-    display: flex;
-    justify-content: center;
-    padding: 1rem 2rem;
-    gap: 1rem;
-  }
-
   /** Box el */
   .mf-box {
     display: flex;
+    flex-direction: column;
     gap: var(--mf-gap-1);
-    width: 46.75rem;
-  }
-
-  :global(.mf-text) {
-    color: var(--mf-link-main-color);
+    width: 100%;
+    color: #fff;
   }
 </style>

@@ -3,45 +3,62 @@
   import { createNamespace } from '$lib/utils';
 
   const [navName, bemNav] = createNamespace('nav');
+
+  /** @todo remove later */
+  const menu = {
+    common: {
+      name: 'Общие',
+      active: true,
+    },
+    management: {
+      name: 'Пользователи и доступы',
+    },
+    payment: {
+      name: 'Оплаты',
+    },
+    order: {
+      name: 'Оформление заказа',
+    },
+    delivery: {
+      name: 'Доставка',
+    },
+    location: {
+      name: 'Локации',
+    },
+    domain: {
+      name: 'Домены',
+    },
+    lang: {
+      name: 'Языки',
+    },
+    privacy: {
+      name: 'Политика безопасности',
+    },
+    logs: {
+      name: 'Логи',
+    },
+  };
 </script>
 
 <nav class={navName}>
   <ul class={bemNav('items')}>
-    <li class={bemNav('item')}>
-      <a
-        href="#"
-        class={bemNav('link', {
-          active: true,
-        })}
-      >
-        <Icon />
-        <Text>Test</Text>
-      </a>
-    </li>
-    <li class={bemNav('item')}>
-      <a href="#" class={bemNav('link')}>
-        <Icon />
-        <Text>Test</Text>
-      </a>
-    </li>
-    <li class={bemNav('item')}>
-      <a href="#" class={bemNav('link')}>
-        <Icon />
-        <Text>Test</Text>
-      </a>
-    </li>
-    <li class={bemNav('item')}>
-      <a href="#" class={bemNav('link')}>
-        <Icon />
-        <Text>Test</Text>
-      </a>
-    </li>
+    {#each Object.entries(menu) as [key, item]}
+      {#if item.name !== ''}
+        <li class={bemNav('item')}>
+          <a href={key} class={bemNav('link', { active: item?.active || false })}>
+            <Icon />
+            <Text>{item.name}</Text>
+          </a>
+        </li>
+      {/if}
+    {/each}
   </ul>
 </nav>
 
-<style>
+<style lang="scss">
   :root {
     --mf-primary-color: #005bc4;
+    --mf-color-bg: #f1f2f4;
     --mf-radius-1: 0.5rem;
     --mf-spacing-1: 0.5rem;
   }
@@ -57,7 +74,6 @@
   .mf-nav__items {
     display: flex;
     flex-direction: column;
-    gap: var(--mf-spacing-1);
     width: 100%;
   }
 
@@ -67,13 +83,17 @@
     gap: var(--mf-spacing-1);
     border-radius: var(--mf-radius-1);
     padding: var(--mf-spacing-1);
-  }
 
-  .mf-nav__link:hover {
-    background-color: red;
-  }
+    &:hover {
+      background-color: var(--mf-color-bg);
+    }
 
-  .mf-nav__link--active {
-    background-color: var(--mf-primary-color);
+    &--active {
+      background-color: var(--mf-primary-color);
+
+      &:hover {
+        background-color: var(--mf-primary-color);
+      }
+    }
   }
 </style>

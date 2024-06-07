@@ -1,3 +1,6 @@
+@use 'sass:list';
+@use 'sass:map';
+
 $size: (
   // [name]: [font-size] [line-height] [letter-spacing]
   xs: 12px 16px 0,
@@ -15,14 +18,20 @@ $size: (
   9xl: 128px 1 0
 );
 
-// $alignment: (
-//   left: left,
-//   cen
-// )
+@mixin text($name) {
+  @if false == map.has-key($size, $name) {
+    @error "utils(Text): not exist `#{$name}` name";
+  }
+  $set: map.get($size, $name);
 
-:root {
+  font-size: list.nth($set, 1);
+  line-height: list.nth($set, 2);
+  letter-spacing: list.nth($set, 3);
 }
 
-body {
-  background-color: blue;
+@include text('base');
+
+@each $name, $set in $size {
+  .text-#{$name} {
+  }
 }

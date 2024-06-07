@@ -2,10 +2,10 @@
   import { Icon, Text } from '$lib';
   import { createNamespace } from '$lib/utils';
 
-  const [_, bemNav] = createNamespace('nav');
+  const [navName, bemNav] = createNamespace('nav');
 </script>
 
-<nav class={bemNav('wrapper')}>
+<nav class={navName}>
   <ul class={bemNav('items')}>
     <li class={bemNav('item')}>
       <a
@@ -46,7 +46,7 @@
     --mf-spacing-1: 0.5rem;
   }
 
-  .mf-nav__wrapper {
+  .mf-nav {
     display: flex;
     width: 18em;
     background-color: white;

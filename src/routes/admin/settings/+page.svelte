@@ -1,4 +1,5 @@
 <script lang="ts">
+  import './+page.scss';
   import { Icon, Text } from '$lib';
   import { createNamespace } from '$lib/utils';
 

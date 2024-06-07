@@ -18,20 +18,39 @@ $size: (
   9xl: 128px 1 0
 );
 
+$weight: (
+  thin: 100,
+  extralight: 200,
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+  black: 900,
+);
+
+///
+/// @param {string} $name
 @mixin text($name) {
   @if false == map.has-key($size, $name) {
     @error "utils(Text): not exist `#{$name}` name";
   }
   $set: map.get($size, $name);
 
-  // font-size: list.nth($set, 1);
-  // line-height: list.nth($set, 2);
-  // letter-spacing: list.nth($set, 3);
+  font-size: list.nth($set, 1);
+  line-height: list.nth($set, 2);
+  letter-spacing: list.nth($set, 3);
 }
 
-@include text('base');
-
+// todo: переместить в другое место
 @each $name, $set in $size {
   .text-#{$name} {
+    @include text($name);
+  }
+}
+@each $name, $value in $weight {
+  .font-#{$name} {
+    font-weight: $value;
   }
 }

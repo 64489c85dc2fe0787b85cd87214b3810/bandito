@@ -1,0 +1,14 @@
+@use "text.config" as config;
+@use "text.mixin" as mixin;
+
+@each $name, $set in map-get(config.$text, "size") {
+  .text-#{$name} {
+    @include mixin.text-size($name);
+  }
+}
+
+@each $name, $set in map-get(config.$text, "weight") {
+  .font-#{$name} {
+    @include mixin.font-weight($name);
+  }
+}

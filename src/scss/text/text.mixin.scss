@@ -1,0 +1,21 @@
+@use "text.config" as config;
+
+/** */
+@mixin text-size($name) {
+  @if false == map-has-key(config.$text, "size", $name) {
+    @error "mixin(text-size): размер шрифта `#{$name}` не существует";
+  }
+  $set: map-get(config.$text, "size", $name);
+
+  font-size: nth($set, 1);
+  line-height: nth($set, 2);
+  letter-spacing: nth($set, 3);
+}
+
+/** */
+@mixin font-weight($name) {
+  @if false == map-has-key(config.$text, "weight", $name) {
+    @error "mixin(font-weight): жирность текста `#{$name}` не существует";
+  }
+  font-weight: map-get(config.$text, "weight" $name);
+}

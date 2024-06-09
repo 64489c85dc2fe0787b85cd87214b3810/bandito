@@ -1,5 +1,5 @@
 <script>
-  import '../style/index.scss';
+  import '../scss/bandito.scss';
   let { children } = $props();
 </script>
 

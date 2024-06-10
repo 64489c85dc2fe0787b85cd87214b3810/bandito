@@ -1,0 +1,104 @@
+@use "sass:map";
+@use "sass:meta";
+@use "sass:string";
+@use "sass:list";
+
+$utilities: ();
+
+$theme: (
+  colors: (
+    blue: (
+      50: red,
+    ),
+  ),
+);
+
+// Миксин для регистрации утилит
+@mixin register-utility($name, $values) {
+  $utilities: map-merge(
+    $utilities,
+    (
+      $name: $values,
+    )
+  ) !global;
+}
+
+@mixin apply($utility-classes) {
+  @if meta.type-of($utility-classes) != "string" {
+    @error 'mixin(apply): $utility-classes должен быть строкой. Пример использования: @include apply("px-10 hstack bg-red-50");';
+  }
+
+  $classes: string.split($utility-classes, " ");
+  @if list.length($classes) == 0 {
+    @error 'mixin(apply): $utility-classes не может быть пустой строкой. Пример использования: @include apply("px-10 hstack bg-red-50");';
+  }
+
+  $attributes: ();
+  $not-exist: ();
+
+  @each $class in $classes {
+    @if map.has-key($utilities, $class) {
+      $attributes: map.merge($attributes, map.get($utilities, $class));
+    } @else {
+      $notExist: list.append($not-exist, $class);
+    }
+  }
+
+  @if list.length($not-exist) > 0 {
+    @error "mixin(apply): утилиты #{$not-exist} не существуют";
+  }
+
+  @each $key, $value in $attributes {
+    #{$key}: #{$value};
+  }
+}
+
+@function get-map-value($map, $keys) {
+  @if length($keys) == 0 {
+    @return $map;
+  }
+
+  $key: nth($keys, 1);
+  $rest-keys: if(length($keys) > 1, slice($keys, 2), ());
+
+  @if map-has-key($map, $key) {
+    @return get-map-value(map-get($map, $key), $rest-keys);
+  } @else {
+    @error "Key `#{$key}` not found in map.";
+  }
+}
+
+@function theme($token) {
+  @if meta.type-of($token) != "string" {
+    @error 'function(theme): $token должен быть строкой. Пример использования: color: theme("colors.blue.50");';
+  }
+
+  $parts: string.split($token, ".");
+  $value: get-map-value($theme $parts);
+  @debug $value;
+  @return var(--mf-color-red, red);
+}
+
+////////////////
+///
+@include register-utility(
+  "px-10",
+  (
+    padding-bottom: 10px,
+    padding-top: 20px,
+  )
+);
+
+@include register-utility(
+  "hstack",
+  (
+    display: flex,
+    flex-direction: column,
+    padding-top: 21px,
+  )
+);
+
+.button-2 {
+  @include apply("px-10 hstack");
+  color: theme("colors.blue.50");
+}

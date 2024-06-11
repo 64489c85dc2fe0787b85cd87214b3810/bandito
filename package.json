@@ -7,7 +7,7 @@
     "docs:preview": "vite preview",
     "package:build": "svelte-kit sync && svelte-package && publint",
     "package:release": "standard-version && git push --follow-tags && npm publish",
-    "build:wc": "vite build -c vite.wc.js",
+    "wc:build": "vite build -c vite.wc.js",
     "ci:check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "ci:check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "ci:lint": "prettier --check .",
@@ -32,6 +32,8 @@
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/package": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "autoprefixer": "^10.4.19",
+    "postcss-nested": "^6.0.1",
     "prettier": "^3.1.1",
     "prettier-plugin-svelte": "^3.1.2",
     "publint": "^0.1.9",
@@ -45,5 +47,8 @@
   },
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@mftd03/alpha": "^0.1.1"
+  }
 }

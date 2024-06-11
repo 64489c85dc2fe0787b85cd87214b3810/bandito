@@ -1,0 +1,15 @@
+<svelte:options customElement="mf-calendar" />
+
+<script lang="ts" context="module">
+  import type { Snippet } from 'svelte';
+
+  export type CalendarProps = {
+    children: Snippet;
+  };
+</script>
+
+<script lang="ts">
+  let { children }: CalendarProps = $props();
+</script>
+
+{@render children()}

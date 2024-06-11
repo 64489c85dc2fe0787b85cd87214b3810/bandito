@@ -1,6 +1,0 @@
-@import "../../scss";
-
-button {
-  @include text-size("9xl");
-  @include hstack(2);
-}

@@ -1,0 +1,5 @@
+.mf-button {
+  @include apply("vstack-6 text-white px-3 bg-primary");
+  border-radius: theme("space.2");
+  appearance: button;
+}

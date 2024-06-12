@@ -22,5 +22,9 @@
   let { children, variant }: ButtonProps = $props();
 </script>
 
-<button class="mf-button">{@render children()}</button>
+<button class="mf-button min-h-10">
+  <span>1</span>
+  <span>{@render children()}</span>
+  <span>3</span>
+</button>
 <a href="/" class="mf-button">{@render children()}</a>

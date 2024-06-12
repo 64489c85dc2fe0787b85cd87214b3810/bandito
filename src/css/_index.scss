@@ -1,11 +1,14 @@
-@import "@mftd03/alpha/preflight";
+@import "@mftd03/alpha";
+
 @import "@mftd03/alpha/theme";
+@import "@mftd03/alpha/preflight";
+@import "@mftd03/alpha/utilities";
 
 @import "accordion.css";
 @import "autocomplete.css";
 @import "avatar.css";
 @import "badge.css";
-@import "button.css";
+@import "button";
 @import "calendar.css";
 @import "checkbox.css";
 @import "chip.css";

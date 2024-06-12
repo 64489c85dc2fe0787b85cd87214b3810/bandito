@@ -157,10 +157,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@mftd03/alpha@^0.1.4":
-  version "0.1.4"
-  resolved "https://npm.pkg.github.com/download/@mftd03/alpha/0.1.4/94803c92295f53c762a6810f327b5e9c5e6e2b6b#94803c92295f53c762a6810f327b5e9c5e6e2b6b"
-  integrity sha512-w3318T6p3fuZrpqHtihjkiQvcjjzaFTz3Y2BvPOW1Wld+A0OAKIkuqzxCcGjpBBmliC6ZHX0C1ZO3BdvC9xepQ==
+"@mftd03/alpha@^0.6.1":
+  version "0.6.1"
+  resolved "https://npm.pkg.github.com/download/@mftd03/alpha/0.6.1/d2fd99435acdfe49418bc25b37e07c39830f3283#d2fd99435acdfe49418bc25b37e07c39830f3283"
+  integrity sha512-33ptZDFgaUSY1oKDrCHyco5GdHQ2LUqAVZKBQGjLGzaGEGtNa9qCQCoQhZGjPd7r9Tkb4aOEb3sqm97iyP5jnA==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -396,10 +396,10 @@ braces@^3.0.3, braces@~3.0.2:
   dependencies:
     fill-range "^7.1.1"
 
-buffer-crc32@^0.2.5:
-  version "0.2.13"
-  resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
-  integrity sha512-VO9Ht/+p3SN7SKWqcrgEzjGbRSJYTx+Q1pTQC0wrWqHx0vpJraQ6GtHx8tvcg1rlK1byhU5gccxgOgj7B0TDkQ==
+buffer-crc32@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-1.0.0.tgz#a10993b9055081d55304bd9feb4a072de179f405"
+  integrity sha512-Db1SbgBS/fg/392AblrMJk97KggmvYhr4pB5ZIMTWtaivCPMWLkmb7m21cJvpvgK+J3nsU2CmmixNBZx4vFj/w==
 
 callsites@^3.0.0:
   version "3.1.0"
@@ -870,9 +870,9 @@ sander@^0.5.0:
     rimraf "^2.5.2"
 
 sass@^1.77.4:
-  version "1.77.4"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.77.4.tgz#92059c7bfc56b827c56eb116778d157ec017a5cd"
-  integrity sha512-vcF3Ckow6g939GMA4PeU7b2K/9FALXk2KF9J87txdHzXbUF9XRQRwSxcAs/fGaTnJeBFd7UoV22j3lzMLdM0Pw==
+  version "1.77.5"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.77.5.tgz#5f9009820297521356e962c0bed13ee36710edfe"
+  integrity sha512-oDfX1mukIlxacPdQqNb6mV2tVCrnE+P3nVYioy72V5tlk56CPNcO4TCuFcaCRKKfJ1M3lH95CleRS+dVKL2qMg==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
@@ -898,12 +898,12 @@ sirv@^2.0.4:
     totalist "^3.0.0"
 
 sorcery@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/sorcery/-/sorcery-0.11.0.tgz#310c80ee993433854bb55bb9aa4003acd147fca8"
-  integrity sha512-J69LQ22xrQB1cIFJhPfgtLuI6BpWRiWu1Y3vSsIwK/eAScqJxd/+CJlUuHQRdX2C9NGFamq+KqNywGgaThwfHw==
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/sorcery/-/sorcery-0.11.1.tgz#7cac27ae9c9549b3cd1e4bb85317f7b2dc7b7e22"
+  integrity sha512-o7npfeJE6wi6J9l0/5LKshFzZ2rMatRiCDwYeDQaOzqdzRJwALhX7mk/A/ecg6wjMu7wdZbmXfD2S/vpOg0bdQ==
   dependencies:
     "@jridgewell/sourcemap-codec" "^1.4.14"
-    buffer-crc32 "^0.2.5"
+    buffer-crc32 "^1.0.0"
     minimist "^1.2.0"
     sander "^0.5.0"
 
@@ -958,9 +958,9 @@ svelte2tsx@~0.7.0:
     pascal-case "^3.1.1"
 
 svelte@^5.0.0-next.1:
-  version "5.0.0-next.153"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-5.0.0-next.153.tgz#8c007b7621558fb9c6abc9063d894bc3e0474a11"
-  integrity sha512-ZbRnvO0UWXhE71Va5Rjg+nY4tbCUnqJFQC0VXHdqkHT/i5nqW8DPtw0rBlsFg4mq2uDQ8iOO/P7tR3OVXaSI7g==
+  version "5.0.0-next.154"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-5.0.0-next.154.tgz#0e75cadf2058924eb7423dc90fa603abe7d4c1cc"
+  integrity sha512-fB7eVEqJ+79L/YBWm8CuKzoqc2+psgdRvlVeyi7y+18piElWLudOsfUNGStD06iFQ3SywyhWYf2HlzXxb4wXVg==
   dependencies:
     "@ampproject/remapping" "^2.2.1"
     "@jridgewell/sourcemap-codec" "^1.4.15"

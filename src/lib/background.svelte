@@ -1,3 +1,5 @@
+<svelte:options customElement={{ tag: 'mf-background', shadow: 'none' }} />
+
 <script lang="ts" context="module">
   const TWallpaper = () => {
     var _width = 50;

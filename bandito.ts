@@ -34,10 +34,11 @@ await build({
 await build({
   configFile: false,
   build: {
-    outDir: 'dist/web-components',
+    outDir: 'dist/js',
     lib: {
       entry: 'dist/svelte/index.js',
       name: 'bandito',
+      formats: ['iife'],
     },
   },
   plugins: [svelte()],

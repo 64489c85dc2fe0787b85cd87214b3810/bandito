@@ -19,11 +19,14 @@ await build({
   build: {
     outDir: 'dist/css',
     rollupOptions: {
-      input: './src/scss/_index.scss',
+      input: { bandito: './src/scss/_index.scss' },
       output: {
-        assetFileNames: `bandito.[ext]`,
+        assetFileNames: '[name].[ext]',
       },
     },
+  },
+  experimental: {
+    renderBuiltUrl: (filename) => `./${filename}`,
   },
 });
 

@@ -20,12 +20,12 @@ build({
   configFile: false,
   build: {
     emptyOutDir: false,
+    outDir: 'dist/svelte',
     rollupOptions: {
       input: './src/scss/_index.scss',
       output: {
-        entryFileNames: `assets/[name].js`,
-        chunkFileNames: `assets/[name].js`,
-        assetFileNames: `assets/[name].[ext]`,
+        entryFileNames: `[name].js`,
+        assetFileNames: `[name].[ext]`,
       },
     },
   },
@@ -35,16 +35,12 @@ build({
 await build({
   configFile: false,
   build: {
-    lib: {
-      entry: ['dist/svelte/index.js', './src/scss/_index.scss'],
-      name: 'mf_bandito',
-      // formats: ['umd'],
-    },
+    emptyOutDir: false,
     outDir: 'dist/web-components',
     rollupOptions: {
+      input: ['dist/svelte/index.js', './src/scss/_index.scss'],
       output: {
         entryFileNames: `[name].js`,
-        chunkFileNames: `[name].js`,
         assetFileNames: `[name].[ext]`,
       },
     },

@@ -3,7 +3,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { build as sveltePackage } from './node_modules/@sveltejs/package/src/index';
 import config from './svelte.config';
 
-// make package
+// svelte package
 await sveltePackage({
   cwd: import.meta.dirname,
   input: 'src/lib',
@@ -38,7 +38,7 @@ await build({
     lib: {
       entry: 'dist/svelte/index.js',
       name: 'bandito',
-      formats: ['iife'],
+      formats: ['iife', 'umd'],
     },
   },
   plugins: [svelte()],

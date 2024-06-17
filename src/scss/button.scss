@@ -1,0 +1,4 @@
+.mf-button {
+  @include apply("hstack text-white px-3 bg-primary rounded");
+  appearance: button;
+}

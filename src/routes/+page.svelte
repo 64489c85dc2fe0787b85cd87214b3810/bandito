@@ -1,11 +1,9 @@
-<script>
-  import { Button, Input } from '$lib';
+<script lang="ts">
+  import { Button, Spinner } from '$lib';
+
+  const onclick = () => {
+    console.log(123);
+  };
 </script>
 
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-
-<Input />
-<Input />
-<Button>hello world</Button>
+<Button color="primary" {onclick} loading>hello world4tewt</Button>

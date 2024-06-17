@@ -2,6 +2,9 @@
 
 <script lang="ts" context="module">
   import type { Snippet } from 'svelte';
+  import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
+
+  export type ButtonColor = 'default' | 'primary' | 'success' | 'warning' | 'danger';
 
   export type ButtonVariant =
     | 'solid'
@@ -12,19 +15,46 @@
     | 'ghost'
     | 'shadow';
 
-  export type ButtonProps = {
+  export type ButtonSize = 's' | 'm' | 'l';
+
+  export type ButtonRadius = 'none' | 'sm' | 'md' | 'lg' | 'full';
+
+  export type ButtonProps = DefaultProps<HTMLButtonElement | HTMLAnchorElement> & {
     children: Snippet;
+    color?: ButtonColor;
     variant?: ButtonVariant;
+    size?: ButtonSize;
+    radius?: ButtonRadius;
+    loading?: boolean;
+    stretched?: boolean;
+    disabled?: boolean;
+    href?: string;
   };
 </script>
 
 <script lang="ts">
-  let { children, variant }: ButtonProps = $props();
+  import Spinner from './spinner.svelte';
+  import type { DefaultProps } from './types';
+
+  let {
+    children,
+    color = 'default',
+    variant = 'solid',
+    size = 's',
+    radius,
+    loading = false,
+    stretched = false,
+    disabled = false,
+    element = $bindable(),
+    ...restProps
+  }: ButtonProps & HTMLButtonAttributes & HTMLAnchorAttributes = $props();
+
+  let tag = $derived('href' in restProps ? 'a' : 'button');
 </script>
 
-<button class="mf-button min-h-10">
-  <span>1</span>
+<svelte:element this={tag} bind:this={element} class="button button-{size}" {...restProps}>
+  {#if loading}
+    <Spinner size="m" onclick={() => alert(123)} />
+  {/if}
   <span>{@render children()}</span>
-  <span>3</span>
-</button>
-<a href="/" class="mf-button">{@render children()}</a>
+</svelte:element>

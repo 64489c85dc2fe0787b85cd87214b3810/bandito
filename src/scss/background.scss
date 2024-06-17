@@ -21,7 +21,7 @@
   &__pattern {
     mix-blend-mode: overlay;
     opacity: 0.3;
-    background: url("../assets/patterns/1.svg") center repeat;
+    background: url("/patterns/1.svg") center repeat;
     background-size: 420px auto;
   }
 }
@@ -29,7 +29,7 @@
 [data-schema="dark"] .mf-background {
   background-color: #000;
   opacity: 0.2;
-  -webkit-mask: url("../assets/patterns/1.svg") center repeat;
+  -webkit-mask: url("/patterns/1.svg") center repeat;
   -webkit-mask-size: 420px auto;
 
   &__pattern {

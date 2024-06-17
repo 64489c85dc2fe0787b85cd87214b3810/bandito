@@ -3,11 +3,9 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { build as sveltePackage } from './node_modules/@sveltejs/package/src/index';
 import config from './svelte.config';
 
-const dirname = import.meta.dirname;
-
 // make package
 await sveltePackage({
-  cwd: dirname,
+  cwd: import.meta.dirname,
   input: 'src/lib',
   output: 'dist/svelte',
   tsconfig: undefined,
@@ -16,16 +14,15 @@ await sveltePackage({
 });
 
 // scss
-build({
+await build({
   configFile: false,
+  publicDir: 'static',
   build: {
-    emptyOutDir: false,
-    outDir: 'dist/svelte',
+    outDir: 'dist/css',
     rollupOptions: {
       input: './src/scss/_index.scss',
       output: {
-        entryFileNames: `[name].js`,
-        assetFileNames: `[name].[ext]`,
+        assetFileNames: `bandito.[ext]`,
       },
     },
   },
@@ -35,14 +32,10 @@ build({
 await build({
   configFile: false,
   build: {
-    emptyOutDir: false,
     outDir: 'dist/web-components',
-    rollupOptions: {
-      input: ['dist/svelte/index.js', './src/scss/_index.scss'],
-      output: {
-        entryFileNames: `[name].js`,
-        assetFileNames: `[name].[ext]`,
-      },
+    lib: {
+      entry: 'dist/svelte/index.js',
+      name: 'bandito',
     },
   },
   plugins: [svelte()],

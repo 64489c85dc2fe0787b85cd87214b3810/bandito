@@ -16,7 +16,6 @@ await sveltePackage({
 // scss
 await build({
   configFile: false,
-  publicDir: 'static',
   build: {
     outDir: 'dist/css',
     rollupOptions: {

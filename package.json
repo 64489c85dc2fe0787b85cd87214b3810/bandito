@@ -1,6 +1,6 @@
 {
   "name": "@mftd03/bandito",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -17,13 +17,19 @@
     ".": {
       "types": "./dist/svelte/index.d.ts",
       "svelte": "./dist/svelte/index.js"
+    },
+    "css": {
+      "import": "./dist/css/bandito.css",
+      "require": "./dist/css/bandito.css"
     }
   },
   "files": [
     "dist/svelte",
     "dist/css",
     "!dist/**/*.test.*",
-    "!dist/**/*.spec.*"
+    "!dist/**/*.spec.*",
+    "!dist/css/favicon.png",
+    "!dist/css/robots.txt"
   ],
   "peerDependencies": {
     "svelte": "^5.0.0-next.1",

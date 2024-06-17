@@ -6,6 +6,7 @@ export { default as AutocompleteSection } from './autocomplete-section.svelte';
 export { default as Avatar } from './avatar.svelte';
 export { default as AvatarGroup } from './avatar-group.svelte';
 export { default as AvatarIcon } from './avatar-icon.svelte';
+export { default as Background } from './background.svelte';
 export { default as Badge } from './badge.svelte';
 export { default as Button } from './button.svelte';
 export { default as ButtonGroup } from './button-group.svelte';

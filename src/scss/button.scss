@@ -1,4 +1,47 @@
-.mf-button {
-  @include apply("hstack text-white px-3 bg-primary rounded");
+.button {
+  @include apply("hstack-5 rounded min-h-7 rounded-lg px-4 font-subhead");
   appearance: button;
+
+  &--solid {
+    color: #fff;
+    background-color: rgb(var(--color-primary));
+  }
+
+  &--faded {
+    color: rgb(var(--color-primary));
+    background-color: rgb(244, 244, 245);
+    // border: 2px solid rgb(212, 212, 216);
+  }
+
+  &--bordered {
+    color: rgb(var(--color-primary));
+    background-color: transparent;
+    border: 2px solid rgb(var(--color-primary));
+  }
+
+  &--light {
+    color: rgb(var(--color-primary));
+    background-color: transparent;
+  }
+
+  &--flat {
+    background-color: rgba(var(--color-primary), 0.15);
+    color: rgb(var(--color-primary));
+  }
+
+  &--ghost {
+    color: rgb(var(--color-primary));
+    background-color: transparent;
+    border: 2px solid rgb(var(--color-primary));
+  }
+
+  &--shadow {
+    color: #fff;
+    background-color: rgb(var(--color-primary));
+    box-shadow:
+      rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+      rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+      rgba(0, 111, 238, 0.4) 0px 10px 15px -3px,
+      rgba(0, 111, 238, 0.4) 0px 4px 6px -4px;
+  }
 }

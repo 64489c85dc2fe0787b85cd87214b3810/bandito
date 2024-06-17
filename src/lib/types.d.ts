@@ -1,21 +1,27 @@
-export type DefaultProps<T = HTMLElement> = {
-  class?: string;
-  element?: T;
+export type Appearance = 'light' | 'dark';
 
-  // @mftd03/alpha
-  'data-schema'?: 'light' | 'dark';
-  'data-accent'?:
-    | 'red'
-    | 'orange'
-    | 'yellow'
-    | 'green'
-    | 'mint'
-    | 'teal'
-    | 'cyan'
-    | 'blue'
-    | 'indigo'
-    | 'purple'
-    | 'pink'
-    | 'brown';
-  'data-font-size'?: 'xs' | 's' | 'm' | 'l' | 'xl' | '2xl' | '3xl';
-};
+export type FontSize = 'xs' | 's' | 'm' | 'l' | 'xl' | '2xl' | '3xl';
+
+export type AccentColor =
+  | 'slate'
+  | 'gray'
+  | 'zinc'
+  | 'neutral'
+  | 'stone'
+  | 'red'
+  | 'orange'
+  | 'amber'
+  | 'yellow'
+  | 'lime'
+  | 'green'
+  | 'emerald'
+  | 'teal'
+  | 'cyan'
+  | 'sky'
+  | 'blue'
+  | 'indigo'
+  | 'violet'
+  | 'purple'
+  | 'fuchsia'
+  | 'pink'
+  | 'rose';

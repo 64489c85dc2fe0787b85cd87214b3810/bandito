@@ -1,5 +1,5 @@
 .button {
-  @include apply("hstack-5 rounded min-h-7 rounded-lg px-4 font-subhead");
+  @include apply("hstack-5 rounded min-h-7 rounded-lg px-4 font-body");
   appearance: button;
 
   &--solid {

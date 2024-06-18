@@ -287,10 +287,10 @@
     semver "^7.3.5"
     tar "^6.1.11"
 
-"@mftd03/alpha@^0.6.1":
-  version "0.6.1"
-  resolved "https://npm.pkg.github.com/download/@mftd03/alpha/0.6.1/d2fd99435acdfe49418bc25b37e07c39830f3283#d2fd99435acdfe49418bc25b37e07c39830f3283"
-  integrity sha512-33ptZDFgaUSY1oKDrCHyco5GdHQ2LUqAVZKBQGjLGzaGEGtNa9qCQCoQhZGjPd7r9Tkb4aOEb3sqm97iyP5jnA==
+"@mftd03/alpha@^0.8.0":
+  version "0.8.0"
+  resolved "https://npm.pkg.github.com/download/@mftd03/alpha/0.8.0/0fff0389be6e0c419875af91902f140306bd2ff0#0fff0389be6e0c419875af91902f140306bd2ff0"
+  integrity sha512-hTh+3iffSxmx0OCE17+zeHVeLvRjm3rApuQ2WIzLBa2L/s0Ly/R/FE2sdwnB+dMFcaajbvLzkOykeEWGPP0HOQ==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"

@@ -1,6 +1,6 @@
 {
   "name": "@mftd03/bandito",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -30,10 +30,10 @@
   ],
   "peerDependencies": {
     "svelte": "^5.0.0-next.1",
-    "@mftd03/alpha": "^0.6.1"
+    "@mftd03/alpha": "^0.8.0"
   },
   "devDependencies": {
-    "@mftd03/alpha": "^0.6.1",
+    "@mftd03/alpha": "^0.8.0",
     "@sveltejs/adapter-vercel": "^5.3.2",
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/package": "^2.0.0",

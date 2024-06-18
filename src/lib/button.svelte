@@ -1,4 +1,4 @@
-<svelte:options customElement="mf-button" />
+<svelte:options customElement={{ tag: 'mf-button', shadow: 'none' }} />
 
 <script lang="ts" context="module">
   import type { Snippet } from 'svelte';

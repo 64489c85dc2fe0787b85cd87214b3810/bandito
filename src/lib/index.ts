@@ -118,3 +118,5 @@ export type { TextareaProps } from './textarea.svelte';
 export type { TimeInputProps } from './time-input.svelte';
 export type { TooltipProps } from './tooltip.svelte';
 export type { UserProps } from './user.svelte';
+
+export * from './utils';

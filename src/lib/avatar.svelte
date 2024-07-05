@@ -1,15 +1,23 @@
 <svelte:options customElement="mf-avatar" />
 
 <script lang="ts" context="module">
-  import type { Snippet } from 'svelte';
+  import { cl, createNamespace } from './utils';
 
   export type AvatarProps = {
-    children: Snippet;
+    /**
+     * @default 48
+     */
+    size?: 16 | 20 | 24 | 28 | 32 | 36 | 40 | 44 | 48 | 56 | 64 | 72 | 80 | 88 | 96 | number;
+    gradientColor?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+    initials?: string;
+    class?: string;
   };
+
+  const [ns, bem] = createNamespace('avatar');
 </script>
 
 <script lang="ts">
-  let { children }: AvatarProps = $props();
+  let { size = 48, class: className, initials }: AvatarProps = $props();
 </script>
 
-{@render children()}
+<span class={cl(ns, className)} style="width: {size}px; height: {size}px">{initials}</span>

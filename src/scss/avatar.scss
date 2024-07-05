@@ -1,0 +1,10 @@
+.mf-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-size: cover;
+  isolation: isolate;
+  position: relative;
+  border-radius: 50%;
+}

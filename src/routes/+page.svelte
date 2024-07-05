@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Button, Spinner } from '$lib';
+  import { Avatar, Button, Spinner } from '$lib';
 
   const onclick = () => {
     console.log(123);
@@ -21,6 +21,8 @@
   ];
   const variants = ['light', 'faded', 'flat', 'solid', 'shadow', 'bordered', 'ghost'];
 </script>
+
+<Avatar initials="mf" />
 
 <div class="vstack gap-2 p-2">
   {#each colors as color}

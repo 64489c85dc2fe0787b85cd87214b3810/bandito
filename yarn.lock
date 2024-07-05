@@ -172,10 +172,10 @@
     semver "^7.3.5"
     tar "^6.1.11"
 
-"@mftd03/alpha@^0.10.0":
-  version "0.10.0"
-  resolved "https://npm.pkg.github.com/download/@mftd03/alpha/0.10.0/e9b60f92e46c335e4a95262d30589a84391127c5#e9b60f92e46c335e4a95262d30589a84391127c5"
-  integrity sha512-Yklzd5hFmHkgu5yeBcDiFSjMnkfnlyBllE204OixOw9QmkfBC8+RCGWz+zPTNWULB0aMsKN/B7OaYucQKifWQg==
+"@mftd03/alpha@^0.10.1":
+  version "0.10.1"
+  resolved "https://npm.pkg.github.com/download/@mftd03/alpha/0.10.1/06a4b87a11bfe4579a56580895c36a8d962626a9#06a4b87a11bfe4579a56580895c36a8d962626a9"
+  integrity sha512-r20km21dLLS8NaOLFGyQeDxLy4mCPCWLO+LOolc0tp5DxeIEBM3GBe3pT7W20T1zzPoo2AYV08AnkiYXLXcXQw==
 
 "@polka/url@^1.0.0-next.24":
   version "1.0.0-next.25"

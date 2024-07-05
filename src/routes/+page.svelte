@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { Avatar, Button, Spinner } from '$lib';
+  import { Avatar, Button, Spinner, FormItem, Input } from '$lib';
+  import { Icon } from '@mftd03/icons';
 
   const onclick = () => {
     console.log(123);
@@ -21,6 +22,12 @@
   ];
   const variants = ['light', 'faded', 'flat', 'solid', 'shadow', 'bordered', 'ghost'];
 </script>
+
+<Icon set={56} name="archive_outline" />
+
+<FormItem top="hello world2" bottom="lol">
+  <Input />
+</FormItem>
 
 <Avatar initials="mf" />
 

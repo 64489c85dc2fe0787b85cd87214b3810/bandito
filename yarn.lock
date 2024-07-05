@@ -177,10 +177,10 @@
   resolved "https://npm.pkg.github.com/download/@mftd03/alpha/0.10.1/06a4b87a11bfe4579a56580895c36a8d962626a9#06a4b87a11bfe4579a56580895c36a8d962626a9"
   integrity sha512-r20km21dLLS8NaOLFGyQeDxLy4mCPCWLO+LOolc0tp5DxeIEBM3GBe3pT7W20T1zzPoo2AYV08AnkiYXLXcXQw==
 
-"@mftd03/icons@^0.2.0":
-  version "0.2.0"
-  resolved "https://npm.pkg.github.com/download/@mftd03/icons/0.2.0/8f719a4ccb367b02f1772708afc07e5e482b4c81#8f719a4ccb367b02f1772708afc07e5e482b4c81"
-  integrity sha512-H9tK+sRUqi0o9SG9vLuBCrXi6AlKktQtprTACnGtIoIxwi53mi/yJhaVDsoBOEVxSPbIN8J72orDqeRyFybBmg==
+"@mftd03/icons@^0.3.0":
+  version "0.3.0"
+  resolved "https://npm.pkg.github.com/download/@mftd03/icons/0.3.0/43e9639038d524e14a064b2c6ca743540438b6e6#43e9639038d524e14a064b2c6ca743540438b6e6"
+  integrity sha512-Uvrb5+gR+v72gDSgmpanfkjSpV8geqSPfjcdlqQzmWppwBOmgPCha3+2sbi887b4MrrkSoDOfDR2mxlJLulyxg==
 
 "@polka/url@^1.0.0-next.24":
   version "1.0.0-next.25"
@@ -1174,9 +1174,9 @@ svelte2tsx@~0.7.0:
     pascal-case "^3.1.1"
 
 svelte@^5.0.0-next.1:
-  version "5.0.0-next.174"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-5.0.0-next.174.tgz#a62655ddbd2f2b5e00dfbba9c2c6d23636d676ef"
-  integrity sha512-TUjE3ba4wyiLa67/07aIDwEy7rAY12SR+v2FBMKBXrqN92pUI8bDYIJA0CER74lSE4WwVcqapFxe7JIGq/swPA==
+  version "5.0.0-next.175"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-5.0.0-next.175.tgz#f9fcda963dc7a6d05e22516f519d941fbe3cba99"
+  integrity sha512-fWMI0O3PiKFWvTohAEJRkd6RymR3uo7PO8GrNfyx57KDvmmK1KYRzAdHjx+RsKl8oZhfWeJHiot6iebgY8lJng==
   dependencies:
     "@ampproject/remapping" "^2.2.1"
     "@jridgewell/sourcemap-codec" "^1.4.15"

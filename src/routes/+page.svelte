@@ -23,6 +23,8 @@
   const variants = ['light', 'faded', 'flat', 'solid', 'shadow', 'bordered', 'ghost'];
 </script>
 
+<Spinner />
+
 <Icon set={56} name="archive_outline" />
 
 <FormItem top="hello world2" bottom="lol">

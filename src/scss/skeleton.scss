@@ -1,0 +1,74 @@
+:host,
+:root {
+  --mf-skeleton_width: 300px;
+  --mf-skeleton_color_from: #f0f2f5;
+  --mf-skeleton_color_to: #e7e8ec;
+  --mf-skeleton_animation_duration: 1.5s;
+
+  --vkui--animation_easing_platform: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mf-skeleton {
+  border-radius: 6px;
+  display: inline-flex;
+  line-height: 1;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &:before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    left: calc(-1 * var(--mf-skeleton_width));
+    right: 0;
+
+    animation-duration: var(--mf-skeleton_animation_duration);
+    animation-iteration-count: infinite;
+    animation-name: mf-skeleton;
+    animation-timing-function: var(--vkui--animation_easing_platform);
+
+    background-attachment: fixed;
+    background-size: var(--mf-skeleton_width) 100%;
+    background-color: var(--mf-skeleton_color_from);
+    background-image: linear-gradient(
+      to right,
+      var(--mf-skeleton_color_from) 0,
+      var(--mf-skeleton_color_to) 50%,
+      var(--mf-skeleton_color_from) 75%
+    );
+  }
+
+  & & {
+    --mf-skeleton_color_from: var(--vkui--color_background_content);
+    --mf-skeleton_color_to: var(--vkui--color_background_tertiary);
+  }
+
+  & & & {
+    --mf-skeleton_color_from: var(--vkui--color_skeleton_from);
+    --mf-skeleton_color_to: var(--vkui--color_skeleton_to);
+  }
+
+  &--disable {
+    animation-name: none;
+    background-image: none;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    animation-name: none;
+    background-image: none;
+  }
+}
+
+@keyframes mf-skeleton {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(var(--mf-skeleton_width, 300px));
+  }
+}

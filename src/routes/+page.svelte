@@ -1,10 +1,6 @@
 <script lang="ts">
-  import { Avatar, Button, Spinner, FormItem, Input } from '$lib';
+  import { Avatar, Button, Spinner, FormItem, Input, Skeleton } from '$lib';
   import { Icon } from '@mftd03/icons';
-
-  const onclick = () => {
-    console.log(123);
-  };
 
   const colors = [
     'red',
@@ -22,6 +18,8 @@
   ];
   const variants = ['light', 'faded', 'flat', 'solid', 'shadow', 'bordered', 'ghost'];
 </script>
+
+<Skeleton width="100px" height="20px" />
 
 <Spinner />
 

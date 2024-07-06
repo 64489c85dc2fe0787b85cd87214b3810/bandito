@@ -1,15 +1,20 @@
 <svelte:options customElement="mf-skeleton" />
 
 <script lang="ts" context="module">
-  import type { Snippet } from 'svelte';
+  import { cl, createNamespace } from './utils';
 
   export type SkeletonProps = {
-    children: Snippet;
+    width?: string;
+    height?: string;
+    borderRadius?: string;
+    class?: string;
   };
+
+  const [ns] = createNamespace('skeleton');
 </script>
 
 <script lang="ts">
-  let { children }: SkeletonProps = $props();
+  let { width, height, borderRadius, class: className }: SkeletonProps = $props();
 </script>
 
-{@render children()}
+<span class={cl(ns, className)} style:width style:height style:border-radius={borderRadius}></span>

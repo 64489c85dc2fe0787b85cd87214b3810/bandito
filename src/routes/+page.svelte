@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Avatar, Button, Spinner, FormItem, Input, Skeleton } from '$lib';
+  import { Avatar, Button, Spinner, FormItem, Input, Skeleton, Popover } from '$lib';
   import { Icon } from '@mftd03/icons';
 
   const colors = [
@@ -21,6 +21,8 @@
 
 <Skeleton width="100px" height="20px" />
 
+<Popover>lol</Popover>
+
 <Spinner />
 
 <Icon set={56} name="archive_outline" />
@@ -33,7 +35,7 @@
 
 <div class="vstack gap-2 p-2">
   {#each colors as color}
-    <h1 class="font-title2 text-{color}">{color}</h1>
+    <h1 class="font-title2 fg-{color}">{color}</h1>
     <div class="hstack gap-2">
       {#each variants as variant}
         <Button {color} {variant}>{variant}</Button>

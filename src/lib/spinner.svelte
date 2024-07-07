@@ -1,12 +1,9 @@
-<svelte:options customElement="mf-spinner" />
-
 <script lang="ts" context="module">
   import type { SVGAttributes } from 'svelte/elements';
-  import type { DefaultProps } from './types';
 
   export type SpinnerSize = 's' | 'm' | 'l' | 'xl';
 
-  export type SpinnerProps = DefaultProps<SVGElement> & {
+  export type SpinnerProps = {
     size?: SpinnerSize;
   };
 

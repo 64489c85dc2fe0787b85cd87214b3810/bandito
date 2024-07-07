@@ -1,5 +1,3 @@
-<svelte:options customElement="mf-calendar" />
-
 <script lang="ts" context="module">
   import type { Snippet } from 'svelte';
 

@@ -1,5 +1,3 @@
-<svelte:options customElement="mf-skeleton" />
-
 <script lang="ts" context="module">
   import { cl, createNamespace } from './utils';
 

@@ -1,5 +1,3 @@
-<svelte:options customElement="mf-input" />
-
 <script lang="ts" context="module">
   export type InputVariant = 'flat' | 'bordered' | 'faded' | 'underlined';
 

@@ -1,5 +1,3 @@
-<svelte:options customElement="mf-avatar" />
-
 <script lang="ts" context="module">
   import { cl, createNamespace } from './utils';
 
@@ -11,13 +9,14 @@
     gradientColor?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
     initials?: string;
     class?: string;
+    style?: string;
   };
 
   const [ns, bem] = createNamespace('avatar');
 </script>
 
 <script lang="ts">
-  let { size = 48, class: className, initials }: AvatarProps = $props();
+  let { size = 48, class: className, initials, style }: AvatarProps = $props();
 </script>
 
-<span class={cl(ns, className)} style="width: {size}px; height: {size}px">{initials}</span>
+<span class={cl(ns, className)} style="width: {size}px; height: {size}px;{style}">{initials}</span>

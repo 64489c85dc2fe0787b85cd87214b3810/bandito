@@ -1,0 +1,7 @@
+:root {
+  --popover-radius: 13px;
+}
+
+.mf-popover {
+  border-radius: var(--popover-radius, 13px);
+}

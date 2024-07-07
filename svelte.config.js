@@ -13,7 +13,7 @@ const config = {
     adapter: adapter(),
   },
   compilerOptions: {
-    customElement: true,
+    // customElement: true,
   },
 };
 

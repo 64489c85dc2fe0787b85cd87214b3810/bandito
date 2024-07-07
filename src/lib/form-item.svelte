@@ -1,5 +1,3 @@
-<svelte:options customElement="mf-form-item" />
-
 <script lang="ts" context="module">
   import { createNamespace } from './utils';
   import type { Snippet } from 'svelte';

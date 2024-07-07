@@ -1,6 +1,5 @@
-<svelte:options customElement={{ tag: 'mf-button', shadow: 'none' }} />
-
 <script lang="ts" context="module">
+  import { createNamespace } from './utils';
   import type { Snippet } from 'svelte';
   import type { AccentColor } from './types';
 
@@ -24,20 +23,26 @@
     stretched?: boolean;
     disabled?: boolean;
     href?: string;
+    class?: string;
+    style?: string;
   };
+
+  const [, bem] = createNamespace('button');
 </script>
 
 <script lang="ts">
   import Spinner from './spinner.svelte';
+  import { cl } from './utils';
 
   let {
     children,
     color,
     variant = 'solid',
-    size = 's',
+    size = 'm',
     loading = false,
     stretched = false,
     disabled = false,
+    class: className,
     ...restProps
   }: ButtonProps = $props();
 
@@ -46,12 +51,7 @@
 
 <svelte:element
   this={tag}
-  class="button button-{size} button--{variant}"
+  class={cl(bem([size, variant]), className)}
   {...restProps}
-  data-accent={color}
+  data-accent={color}>{@render children()}</svelte:element
 >
-  {#if loading}
-    <Spinner size="m" onclick={() => alert(123)} />
-  {/if}
-  <span>{@render children()}</span>
-</svelte:element>

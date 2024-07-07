@@ -1,47 +1,72 @@
-.button {
-  @include apply("hstack-5 font-body");
+.mf-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   appearance: button;
 
+  // size
+  &--s {
+    @include apply("font-subhead");
+    height: 28px;
+    border-radius: 40px;
+    padding: 4px 10px;
+    gap: 3px;
+  }
+  &--m {
+    @include apply("font-subhead");
+    height: 34px;
+    border-radius: 40px;
+    padding: 7px 14px;
+    gap: 4px;
+  }
+  &--l {
+    @include apply("font-body");
+    height: 50px;
+    border-radius: 12px;
+    padding: 14px 20px;
+    gap: 4px;
+  }
+
+  // variant
   &--solid {
     color: #fff;
-    background-color: rgb(var(--color-primary));
+    background-color: var(--color-accent);
   }
 
   &--faded {
-    color: rgb(var(--color-primary));
+    color: var(--color-accent);
     background-color: rgb(244, 244, 245);
-    // border: 2px solid rgb(212, 212, 216);
   }
 
   &--bordered {
-    color: rgb(var(--color-primary));
+    color: var(--color-accent);
     background-color: transparent;
-    border: 2px solid rgb(var(--color-primary));
+    border: 2px solid var(--color-accent);
   }
 
   &--light {
-    color: rgb(var(--color-primary));
+    color: var(--color-accent);
     background-color: transparent;
   }
 
   &--flat {
-    background-color: rgba(var(--color-primary), 0.15);
-    color: rgb(var(--color-primary));
+    background-color: rgba(var(--rgb-accent), 0.15);
+    color: var(--color-accent);
   }
 
   &--ghost {
-    color: rgb(var(--color-primary));
+    color: var(--color-accent);
     background-color: transparent;
-    border: 2px solid rgb(var(--color-primary));
+    border: 2px solid var(--color-accent);
   }
 
   &--shadow {
     color: #fff;
-    background-color: rgb(var(--color-primary));
+    background-color: var(--color-accent);
     box-shadow:
       rgba(0, 0, 0, 0) 0px 0px 0px 0px,
       rgba(0, 0, 0, 0) 0px 0px 0px 0px,
-      rgba(var(--color-primary), 0.4) 0px 10px 15px -3px,
-      rgba(var(--color-primary), 0.4) 0px 4px 6px -4px;
+      rgba(var(--rgb-accent), 0.4) 0px 10px 15px -3px,
+      rgba(var(--rgb-accent), 0.4) 0px 4px 6px -4px;
   }
 }

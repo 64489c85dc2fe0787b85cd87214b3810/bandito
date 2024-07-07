@@ -1,5 +1,3 @@
-<svelte:options customElement={{ tag: 'mf-background', shadow: 'none' }} />
-
 <script lang="ts" context="module">
   const TWallpaper = () => {
     var _width = 50;
@@ -309,6 +307,6 @@
     width={50}
     height={50}
     data-colors={colors[color].join(',')}
-  />
-  <span class="mf-background__pattern" />
+  ></canvas>
+  <div class="mf-background__pattern"></div>
 </div>

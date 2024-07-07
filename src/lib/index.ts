@@ -58,7 +58,6 @@ export { default as Tabs } from './tabs.svelte';
 export { default as Textarea } from './textarea.svelte';
 export { default as TimeInput } from './time-input.svelte';
 export { default as Tooltip } from './tooltip.svelte';
-export { default as User } from './user.svelte';
 
 export type { AccordionItemProps } from './accordion-item.svelte';
 export type { AccordionProps } from './accordion.svelte';
@@ -119,6 +118,5 @@ export type { TabsProps } from './tabs.svelte';
 export type { TextareaProps } from './textarea.svelte';
 export type { TimeInputProps } from './time-input.svelte';
 export type { TooltipProps } from './tooltip.svelte';
-export type { UserProps } from './user.svelte';
 
 export * from './utils';

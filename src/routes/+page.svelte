@@ -33,11 +33,9 @@
 
 <div class="container">
   <Tabs variant="underline" activeId="12">
-    <HorizontalScroll>
-      <TabsItem id="11">1123 123 123 123 1231 23 12</TabsItem>
-      <TabsItem id="12">1</TabsItem>
-      <TabsItem id="test">lol</TabsItem>
-    </HorizontalScroll>
+    <TabsItem id="11">1123 123 123 123 1231 23 12</TabsItem>
+    <TabsItem id="12">1</TabsItem>
+    <TabsItem id="test">lol</TabsItem>
   </Tabs>
 
   <SimpleCell>lol</SimpleCell>

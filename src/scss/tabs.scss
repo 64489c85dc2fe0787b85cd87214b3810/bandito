@@ -3,9 +3,16 @@
 }
 
 .mf-tabs--underline {
+  .mf-horizontal-scroll__wrapper {
+    position: relative;
+  }
+
   .mf-tabs__line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
     transition-duration: 0.3s;
-    width: 20px;
     height: 3px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;

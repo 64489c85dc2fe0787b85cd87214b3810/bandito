@@ -8,6 +8,7 @@
     id: string;
     tag?: keyof HTMLElementTagNameMap;
     class?: string;
+    [key: string]: any;
   };
 
   const [, bem] = createNamespace('tabs-item');

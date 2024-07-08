@@ -43,3 +43,13 @@ await build({
   },
   plugins: [svelte()],
 });
+
+import packageJson from './package.json';
+const [major, minor] = packageJson.version.split('.').map(Number);
+packageJson.version = `${major}.${minor + 1}.0`;
+Bun.write('./package.json', JSON.stringify(packageJson, null, 2));
+
+import { $ } from 'bun';
+await $`npm publish`;
+await $`git add .`;
+await $`git commit -m 'chore: update version'`;

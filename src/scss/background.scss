@@ -27,9 +27,8 @@
 }
 
 [data-mode="dark"] .mf-background {
-  background-color: #000;
   opacity: 0.2;
-  -webkit-mask: url(../assets/background/2.svg) center repeat;
+  -webkit-mask: url("../assets/background/5.svg") center repeat;
   -webkit-mask-size: 420px auto;
 
   &__pattern {

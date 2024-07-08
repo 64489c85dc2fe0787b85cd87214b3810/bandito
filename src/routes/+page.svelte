@@ -11,6 +11,7 @@
     TabsItem,
     SimpleCell,
     HorizontalScroll,
+    Background,
   } from '$lib';
   import { Icon } from '@mftd03/icons';
 
@@ -30,6 +31,8 @@
   ];
   const variants = ['light', 'faded', 'flat', 'solid', 'shadow', 'bordered', 'ghost'];
 </script>
+
+<Background />
 
 <div class="container">
   <Tabs variant="underline" activeId="12">

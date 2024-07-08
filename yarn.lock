@@ -172,10 +172,10 @@
     semver "^7.3.5"
     tar "^6.1.11"
 
-"@mftd03/alpha@^0.14.2":
-  version "0.14.2"
-  resolved "https://npm.pkg.github.com/download/@mftd03/alpha/0.14.2/31ed754de16616615ceb290a99d0dd93d0afe67d#31ed754de16616615ceb290a99d0dd93d0afe67d"
-  integrity sha512-FCJQmMasaH9Z5RrHMAtDRqYozMkC/61CYlIll7k2DKx09axIMTzLnhc9wgp3UQT1H8wPfG6R8RCy64nhT61a0w==
+"@mftd03/alpha@^0.15.2":
+  version "0.15.2"
+  resolved "https://npm.pkg.github.com/download/@mftd03/alpha/0.15.2/24f712430bb7e70030b03f9858b045cbd58cf184#24f712430bb7e70030b03f9858b045cbd58cf184"
+  integrity sha512-4lHxFL2fZrLELG38pCmLton2z8j1QaCAY4fPBo+mOd+gKPfNX4igEFSfUIR0kBmNF+F1stW6hxqOLVVyqVsN1w==
 
 "@mftd03/icons@^0.3.0":
   version "0.3.0"
@@ -1173,10 +1173,10 @@ svelte2tsx@~0.7.0:
     dedent-js "^1.0.1"
     pascal-case "^3.1.1"
 
-svelte@5.0.0-next.175:
-  version "5.0.0-next.175"
-  resolved "https://registry.yarnpkg.com/svelte/-/svelte-5.0.0-next.175.tgz#f9fcda963dc7a6d05e22516f519d941fbe3cba99"
-  integrity sha512-fWMI0O3PiKFWvTohAEJRkd6RymR3uo7PO8GrNfyx57KDvmmK1KYRzAdHjx+RsKl8oZhfWeJHiot6iebgY8lJng==
+svelte@^5.0.0-next.1:
+  version "5.0.0-next.177"
+  resolved "https://registry.yarnpkg.com/svelte/-/svelte-5.0.0-next.177.tgz#eaaa0fec40a28aba1f39997128b2ddeb72e23d81"
+  integrity sha512-CzD1RLR5SUMYjGsLCjm6yWfuB7N/1aY4P5FESDoCtklVHstfj4+FQWESJ+HFI7g7YPSBWWQw5P39eDPk2Wkisg==
   dependencies:
     "@ampproject/remapping" "^2.2.1"
     "@jridgewell/sourcemap-codec" "^1.4.15"

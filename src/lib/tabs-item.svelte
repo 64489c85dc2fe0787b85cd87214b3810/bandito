@@ -10,7 +10,7 @@
     class?: string;
   };
 
-  const [ns] = createNamespace('tabs-item');
+  const [, bem] = createNamespace('tabs-item');
 </script>
 
 <script lang="ts">
@@ -18,6 +18,7 @@
 
   let el = $state<HTMLElement>();
   let ctx = getContext<TabsContext>('tabs');
+  let active = $derived(ctx.activeId === id);
 
   const onclick = () => {
     ctx.activeId = id;
@@ -36,7 +37,7 @@
   this={tag}
   bind:this={el}
   role="tab"
-  class={cl(ns, className)}
+  class={cl(bem({ active }), className)}
   {onclick}
   {...restProps}>{@render children()}</svelte:element
 >

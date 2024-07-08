@@ -21,6 +21,11 @@
     white-space: nowrap;
     padding: 0 12px;
     min-height: 48px;
+    color: var(--label-2);
+
+    &--active {
+      color: var(--color-accent);
+    }
   }
 }
 

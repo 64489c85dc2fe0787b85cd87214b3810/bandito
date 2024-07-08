@@ -1,3 +1,7 @@
+// utils
+export * from './utils';
+
+// components
 export { default as Accordion } from './accordion.svelte';
 export { default as AccordionItem } from './accordion-item.svelte';
 export { default as Autocomplete } from './autocomplete.svelte';
@@ -25,6 +29,7 @@ export { default as DropdownMenu } from './dropdown-menu.svelte';
 export { default as DropdownSection } from './dropdown-section.svelte';
 export { default as DropdownTrigger } from './dropdown-trigger.svelte';
 export { default as FormItem } from './form-item.svelte';
+export { default as HorizontalScroll } from './horizontal-scroll.svelte';
 export { default as Image } from './image.svelte';
 export { default as Input } from './input.svelte';
 export { default as Kbd } from './kbd.svelte';
@@ -48,17 +53,19 @@ export { default as ScrollShadow } from './scroll-shadow.svelte';
 export { default as Select } from './select.svelte';
 export { default as SelectItem } from './select-item.svelte';
 export { default as SelectSection } from './select-section.svelte';
+export { default as SimpleCell } from './simple-cell.svelte';
 export { default as Skeleton } from './skeleton.svelte';
 export { default as Slider } from './slider.svelte';
 export { default as Spacer } from './spacer.svelte';
 export { default as Spinner } from './spinner.svelte';
 export { default as Switch } from './switch.svelte';
-export { default as Tab } from './tab.svelte';
 export { default as Tabs } from './tabs.svelte';
+export { default as TabsItem } from './tabs-item.svelte';
 export { default as Textarea } from './textarea.svelte';
 export { default as TimeInput } from './time-input.svelte';
 export { default as Tooltip } from './tooltip.svelte';
 
+// props type
 export type { AccordionItemProps } from './accordion-item.svelte';
 export type { AccordionProps } from './accordion.svelte';
 export type { AutocompleteItemProps } from './autocomplete-item.svelte';
@@ -85,6 +92,7 @@ export type { DropdownProps } from './dropdown.svelte';
 export type { DropdownSectionProps } from './dropdown-section.svelte';
 export type { DropdownTriggerProps } from './dropdown-trigger.svelte';
 export type { FormItemProps } from './form-item.svelte';
+export type { HorizontalScrollProps } from './horizontal-scroll.svelte';
 export type { ImageProps } from './image.svelte';
 export type { InputProps } from './input.svelte';
 export type { KbdProps } from './kbd.svelte';
@@ -108,15 +116,14 @@ export type { ScrollShadowProps } from './scroll-shadow.svelte';
 export type { SelectItemProps } from './select-item.svelte';
 export type { SelectProps } from './select.svelte';
 export type { SelectSectionProps } from './select-section.svelte';
+export type { SimpleCellProps } from './simple-cell.svelte';
 export type { SkeletonProps } from './skeleton.svelte';
 export type { SliderProps } from './slider.svelte';
 export type { SpacerProps } from './spacer.svelte';
 export type { SpinnerProps } from './spinner.svelte';
 export type { SwitchProps } from './switch.svelte';
-export type { TabProps } from './tab.svelte';
+export type { TabsItemProps } from './tabs-item.svelte';
 export type { TabsProps } from './tabs.svelte';
 export type { TextareaProps } from './textarea.svelte';
 export type { TimeInputProps } from './time-input.svelte';
 export type { TooltipProps } from './tooltip.svelte';
-
-export * from './utils';

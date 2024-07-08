@@ -1,6 +1,6 @@
 {
   "name": "@mftd03/bandito",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "license": "MIT",
   "scripts": {
     "dev": "vite dev",
@@ -33,7 +33,7 @@
     "svelte": "^5.0.0-next.1"
   },
   "dependencies": {
-    "@mftd03/alpha": "^0.15.3",
+    "@mftd03/alpha": "^0.15.4",
     "@mftd03/icons": "^0.3.0"
   },
   "devDependencies": {

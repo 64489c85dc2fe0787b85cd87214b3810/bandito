@@ -32,8 +32,6 @@
   const variants = ['light', 'faded', 'flat', 'solid', 'shadow', 'bordered', 'ghost'];
 </script>
 
-<Background />
-
 <div class="container">
   <Tabs variant="underline" activeId="12">
     <TabsItem id="11">1123 123 123 123 1231 23 12</TabsItem>

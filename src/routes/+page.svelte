@@ -12,6 +12,7 @@
     SimpleCell,
     HorizontalScroll,
     Background,
+    Group,
   } from '$lib';
   import { Icon } from '@mftd03/icons';
 
@@ -33,13 +34,62 @@
 </script>
 
 <div class="container">
+  <Group>
+    <Group mode="plain">
+      <SimpleCell indicator="+7 ••• •• •• 96">
+        {#snippet before()}
+          <Icon set={28} name="phone_outline" />
+        {/snippet}
+        Номер телефона1
+      </SimpleCell>
+      <SimpleCell indicator="g•••@gmail.com">
+        {#snippet before()}
+          <Icon set={28} name="phone_outline" />
+        {/snippet}
+        Email2
+      </SimpleCell>
+      <SimpleCell indicator="g•••@gmail.com">
+        {#snippet before()}
+          <Icon set={28} name="phone_outline" />
+        {/snippet}
+        last
+      </SimpleCell>
+    </Group>
+    <Group mode="plain">
+      <SimpleCell indicator="+7 ••• •• •• 96">
+        {#snippet before()}
+          <Icon set={28} name="phone_outline" />
+        {/snippet}
+        Номер телефона
+      </SimpleCell>
+      <SimpleCell indicator="g•••@gmail.com">
+        {#snippet before()}
+          <Icon set={28} name="phone_outline" />
+        {/snippet}
+        Email
+      </SimpleCell>
+    </Group>
+    <Group mode="plain">
+      <SimpleCell indicator="+7 ••• •• •• 96">
+        {#snippet before()}
+          <Icon set={28} name="phone_outline" />
+        {/snippet}
+        Номер телефона
+      </SimpleCell>
+      <SimpleCell indicator="g•••@gmail.com">
+        {#snippet before()}
+          <Icon set={28} name="phone_outline" />
+        {/snippet}
+        Email
+      </SimpleCell>
+    </Group>
+  </Group>
+
   <Tabs variant="underline" activeId="12">
     <TabsItem id="11">1123 123 123 123 1231 23 12</TabsItem>
     <TabsItem id="12">1</TabsItem>
     <TabsItem id="test">lol</TabsItem>
   </Tabs>
-
-  <SimpleCell>lol</SimpleCell>
 
   <Skeleton width="100px" height="20px" />
 
@@ -60,7 +110,7 @@
       <h1 class="font-title2 fg-{color}">{color}</h1>
       <div class="hstack gap-2">
         {#each variants as variant}
-          <Button {color} {variant}>{variant}</Button>
+          <Button data-accent={color} {variant}>{variant}</Button>
         {/each}
       </div>
     {/each}

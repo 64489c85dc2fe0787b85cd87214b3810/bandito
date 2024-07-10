@@ -36,3 +36,22 @@ export type AlphaDataAttrs = {
    */
   'data-accent'?: AlphaAccent;
 };
+
+export type DefaultProps = AlphaDataAttrs & {
+  /**
+   *
+   */
+  tag?: keyof HTMLElementTagNameMap;
+  /**
+   *
+   */
+  class?: string;
+  /**
+   *
+   */
+  style?: string;
+  /**
+   *
+   */
+  [key: string]: unknown;
+};

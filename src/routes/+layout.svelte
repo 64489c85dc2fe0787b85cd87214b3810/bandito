@@ -8,7 +8,7 @@
 <Background color={0} />
 
 <svelte:head>
-  <title>Bandito</title>
+  <title>bandito — UI KIT</title>
 </svelte:head>
 
 {@render children()}

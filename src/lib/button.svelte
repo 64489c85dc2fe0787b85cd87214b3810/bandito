@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
   import { createNamespace } from './utils';
   import type { Snippet } from 'svelte';
-  import type { AlphaDataAttrs } from './types';
+  import type { DefaultProps } from './types';
 
   export type ButtonVariant =
     | 'solid'
@@ -14,7 +14,7 @@
 
   export type ButtonSize = 's' | 'm' | 'l';
 
-  export type ButtonProps = AlphaDataAttrs & {
+  export type ButtonProps = DefaultProps & {
     children: Snippet;
     variant?: ButtonVariant;
     size?: ButtonSize;
@@ -22,8 +22,6 @@
     stretched?: boolean;
     disabled?: boolean;
     href?: string;
-    class?: string;
-    style?: string;
   };
 
   const [, bem] = createNamespace('button');

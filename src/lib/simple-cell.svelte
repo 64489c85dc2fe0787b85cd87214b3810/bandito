@@ -1,8 +1,9 @@
 <script lang="ts" context="module">
+  import { cl, createNamespace } from './utils';
+  import type { DefaultProps } from './types';
   import type { Snippet } from 'svelte';
-  import { createNamespace } from './utils';
 
-  export type SimpleCellProps = {
+  export type SimpleCellProps = DefaultProps & {
     children: Snippet;
     before?: Snippet;
     after?: Snippet;
@@ -12,9 +13,17 @@
 </script>
 
 <script lang="ts">
-  let { children, before, after }: SimpleCellProps = $props();
+  let {
+    children,
+    before,
+    after,
+    class: className,
+    tag = 'div',
+    ...restProps
+  }: SimpleCellProps = $props();
 </script>
 
-<div class={ns}>
-  {@render children()}
-</div>
+<svelte:element this={tag} class={cl(ns, className)} {...restProps}>
+  <span class={bem('before')}>{@render before?.()}</span>
+  <span class={bem('in')}>{@render children()}</span>
+</svelte:element>

@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
   import { createNamespace } from './utils';
   import type { Snippet } from 'svelte';
-  import type { AccentColor, AlphaDataAttrs } from './types';
+  import type { AlphaDataAttrs } from './types';
 
   export type ButtonVariant =
     | 'solid'
@@ -16,7 +16,6 @@
 
   export type ButtonProps = AlphaDataAttrs & {
     children: Snippet;
-    color?: AccentColor;
     variant?: ButtonVariant;
     size?: ButtonSize;
     loading?: boolean;
@@ -36,7 +35,6 @@
 
   let {
     children,
-    color,
     variant = 'solid',
     size = 'm',
     loading = false,
@@ -49,9 +47,6 @@
   let tag = $derived('href' in restProps ? 'a' : 'button');
 </script>
 
-<svelte:element
-  this={tag}
-  class={cl(bem([size, variant]), className)}
-  {...restProps}
-  data-accent={color}>{@render children()}</svelte:element
+<svelte:element this={tag} class={cl(bem([size, variant]), className)} {...restProps}
+  >{@render children()}</svelte:element
 >

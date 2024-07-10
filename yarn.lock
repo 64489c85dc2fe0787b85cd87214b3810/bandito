@@ -172,10 +172,10 @@
     semver "^7.3.5"
     tar "^6.1.11"
 
-"@mftd03/alpha@^0.16.0":
-  version "0.16.0"
-  resolved "https://npm.pkg.github.com/download/@mftd03/alpha/0.16.0/c0a5e3b7442f36d78c9067dbfb81027b8b21be40#c0a5e3b7442f36d78c9067dbfb81027b8b21be40"
-  integrity sha512-o59dDAnCMkNrwu7C/BAcnr/VAIv78X8HxIN4gij2PRDoanx7tKjaaWM8asY14JmGmhr+efQreFBEmeFjky6kbg==
+"@mftd03/alpha@^0.16.1":
+  version "0.16.1"
+  resolved "https://npm.pkg.github.com/download/@mftd03/alpha/0.16.1/447a6ae8b5efd45640c074d0158de5db6e8a0e31#447a6ae8b5efd45640c074d0158de5db6e8a0e31"
+  integrity sha512-ybmwCHVcrKALY+TsEyowPNDM2QheQjQidIeAXa3Kt6NB0pnaJB13lLw0H+cWQPTm+DoWjOkhJRQ9gfDBPQFC4w==
 
 "@mftd03/icons@^0.3.0":
   version "0.3.0"

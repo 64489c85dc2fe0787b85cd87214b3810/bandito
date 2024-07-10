@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
   import { createNamespace } from './utils';
   import type { Snippet } from 'svelte';
-  import type { AccentColor } from './types';
+  import type { AccentColor, AlphaDataAttrs } from './types';
 
   export type ButtonVariant =
     | 'solid'
@@ -14,7 +14,7 @@
 
   export type ButtonSize = 's' | 'm' | 'l';
 
-  export type ButtonProps = {
+  export type ButtonProps = AlphaDataAttrs & {
     children: Snippet;
     color?: AccentColor;
     variant?: ButtonVariant;

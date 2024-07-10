@@ -1,8 +1,10 @@
-export type Appearance = 'light' | 'dark';
+export type AlphaMode = 'light' | 'dark';
 
-export type FontSize = 'xs' | 's' | 'm' | 'l' | 'xl' | '2xl' | '3xl';
+export type AlphaStyle = 'regular' | 'grouped' | 'vibrant';
 
-export type AccentColor =
+export type AlphaFontSize = 'xs' | 's' | 'm' | 'l' | 'xl' | '2xl' | '3xl';
+
+export type AlphaAccent =
   | 'red'
   | 'orange'
   | 'yellow'
@@ -15,3 +17,22 @@ export type AccentColor =
   | 'purple'
   | 'pink'
   | 'brown';
+
+export type AlphaDataAttrs = {
+  /**
+   * Управление светлой/темной темой.
+   */
+  'data-mode'?: AlphaMode;
+  /**
+   * Управление стилем. Обычный, группированный, вибрация
+   */
+  'data-style'?: AlphaStyle;
+  /**
+   * Управление размером текста
+   */
+  'data-font-size'?: AlphaFontSize;
+  /**
+   * Управление акцентным цветом
+   */
+  'data-accent'?: AlphaAccent;
+};

@@ -3,7 +3,7 @@
   import type { DefaultProps } from './types';
   import type { Snippet } from 'svelte';
 
-  export type SimpleCellProps = DefaultProps & {
+  export type CellButtonProps = DefaultProps & {
     children: Snippet;
     before?: Snippet;
     after?: Snippet;
@@ -20,13 +20,10 @@
     class: className,
     tag = 'div',
     ...restProps
-  }: SimpleCellProps = $props();
+  }: CellButtonProps = $props();
 </script>
 
 <svelte:element this={tag} class={cl(ns, className)} {...restProps}>
   <span class={bem('before')}>{@render before?.()}</span>
-  <span class={bem('in')}>
-    <span>{@render children()}</span>
-    <span></span>
-  </span>
+  <span class={bem('in')}>{@render children()}</span>
 </svelte:element>

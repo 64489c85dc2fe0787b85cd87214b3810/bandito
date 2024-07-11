@@ -1,4 +1,19 @@
+.mf-group-header {
+  color: var(--label-2);
+}
+
 .mf-group {
-  border-radius: 10px;
-  background-color: var(--background-2);
+  &__content {
+    background-color: var(--background-2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  & & {
+    margin-bottom: 40px;
+  }
+}
+
+.mf-group:has(.mf-group) > .mf-group__content {
+  background-color: initial;
 }

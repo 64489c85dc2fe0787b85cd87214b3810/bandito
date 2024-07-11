@@ -3,17 +3,11 @@
   import type { DefaultProps } from './types';
   import type { Snippet } from 'svelte';
 
-  export type GroupMode = 'plain' | 'card';
-
-  export type GroupPadding = 's' | 'm';
-
   export type GroupProps = DefaultProps & {
     children: Snippet;
-    mode?: GroupMode;
-    /**
-     * @default 'm'
-     */
-    padding?: GroupPadding;
+    header?: Snippet | string;
+    footer?: Snippet | string;
+    inset?: boolean;
   };
 
   const [, bem] = createNamespace('group');
@@ -22,20 +16,23 @@
 <script lang="ts">
   let {
     children,
-    mode,
-    padding = 'm',
+    header,
+    footer,
+    inset,
     class: className,
-    tag = 'div',
     'data-style': dataStyle = 'grouped',
     ...restProps
   }: GroupProps = $props();
 </script>
 
-<svelte:element
-  this={tag}
-  class={cl(bem([mode, padding]), className)}
-  data-style={dataStyle}
-  {...restProps}
->
-  {@render children()}
-</svelte:element>
+<section class={cl(bem({ inset }), className)} data-style={dataStyle} {...restProps}>
+  {#if header}
+    <header class={bem('header')}>header</header>
+  {/if}
+
+  <div class={bem('content')}>{@render children()}</div>
+
+  {#if footer}
+    <footer class={bem('footer')}>footer</footer>
+  {/if}
+</section>

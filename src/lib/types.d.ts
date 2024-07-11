@@ -53,5 +53,5 @@ export type DefaultProps = AlphaDataAttrs & {
   /**
    *
    */
-  [key: string]: unknown;
+  // [key: string]: unknown;
 };

@@ -35,7 +35,7 @@
 
 <div class="container">
   <Group>
-    <Group mode="plain">
+    <Group header="test" footer="kek">
       <SimpleCell indicator="+7 ••• •• •• 96">
         {#snippet before()}
           <Icon set={28} name="phone_outline" />
@@ -55,7 +55,7 @@
         last
       </SimpleCell>
     </Group>
-    <Group mode="plain">
+    <Group>
       <SimpleCell indicator="+7 ••• •• •• 96">
         {#snippet before()}
           <Icon set={28} name="phone_outline" />
@@ -69,7 +69,7 @@
         Email
       </SimpleCell>
     </Group>
-    <Group mode="plain">
+    <Group>
       <SimpleCell indicator="+7 ••• •• •• 96">
         {#snippet before()}
           <Icon set={28} name="phone_outline" />

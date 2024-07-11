@@ -6,6 +6,7 @@
   gap: 4px;
   cursor: pointer;
   width: 100%;
+  color: var(--label-1);
 
   &:not(.mf-cell--disabled):hover {
     background-color: var(--fill-3);

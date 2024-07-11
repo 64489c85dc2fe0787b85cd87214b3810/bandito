@@ -177,10 +177,10 @@
   resolved "https://npm.pkg.github.com/download/@mftd03/alpha/0.16.3/db80734153abf67c65de895a08005874aa3b7d4c#db80734153abf67c65de895a08005874aa3b7d4c"
   integrity sha512-dHfSJu/TsFiFNDkU2HZgKKGPyUyaQShY7arnN4ppd+THUdsI+v07rmpee1uDbhCdoX1o0+YTixMKX2/rbSR4Uw==
 
-"@mftd03/icons@^0.3.0":
-  version "0.3.0"
-  resolved "https://npm.pkg.github.com/download/@mftd03/icons/0.3.0/43e9639038d524e14a064b2c6ca743540438b6e6#43e9639038d524e14a064b2c6ca743540438b6e6"
-  integrity sha512-Uvrb5+gR+v72gDSgmpanfkjSpV8geqSPfjcdlqQzmWppwBOmgPCha3+2sbi887b4MrrkSoDOfDR2mxlJLulyxg==
+"@mftd03/icons@^0.5.0":
+  version "0.5.0"
+  resolved "https://npm.pkg.github.com/download/@mftd03/icons/0.5.0/d569d2e4292610816fa8b5d4c6c75de0f50b74dd#d569d2e4292610816fa8b5d4c6c75de0f50b74dd"
+  integrity sha512-uYRGqwRtr4PdPnANhIzkEXeu2CfAAp6JzD+HvfCEi86mkwiHqk2wxHU9QML8HI4+LgBP7GSAY1At89GTv6JIWg==
 
 "@polka/url@^1.0.0-next.24":
   version "1.0.0-next.25"

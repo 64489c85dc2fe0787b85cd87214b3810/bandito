@@ -15,6 +15,7 @@
     Group,
     CellButton,
   } from '$lib';
+  import CellIcon from '$lib/cell-icon.svelte';
   import { Icon } from '@mftd03/icons';
 
   const colors = [
@@ -38,7 +39,12 @@
   <Avatar size={36} class="gradient-6" initials="ВА" />
   <Group>
     <Group header="test" footer="kek">
-      <SimpleCell>Номер телефона1</SimpleCell>
+      <SimpleCell>
+        {#snippet image()}
+          <CellIcon name="add_alt" data-accent="indigo" />
+        {/snippet}
+        Номер телефона2
+      </SimpleCell>
       <SimpleCell indicator="g•••@gmail.com">
         {#snippet image()}
           <Icon set={28} name="phone_outline" />

@@ -35,6 +35,7 @@
 </script>
 
 <div class="container">
+  <Avatar size={36} class="gradient-6" initials="ВА" />
   <Group>
     <Group header="test" footer="kek">
       <SimpleCell>Номер телефона1</SimpleCell>

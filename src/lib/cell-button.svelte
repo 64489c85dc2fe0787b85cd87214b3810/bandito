@@ -9,7 +9,7 @@
     disabled?: boolean;
   };
 
-  const [ns, bem] = createNamespace('cell');
+  const [, bem] = createNamespace('cell');
 </script>
 
 <script lang="ts">

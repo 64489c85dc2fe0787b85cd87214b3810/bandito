@@ -7,4 +7,8 @@
   isolation: isolate;
   position: relative;
   border-radius: 50%;
+
+  font-family: var(--fontFamily-rounded);
+  font-weight: 600;
+  color: var(--color-white);
 }

@@ -2,21 +2,43 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-left: 16px;
+  gap: 4px;
   cursor: pointer;
+  width: 100%;
 
-  &:hover {
+  &:not(.mf-cell--disabled):hover {
     background-color: var(--fill-3);
   }
 
-  &__in {
-    flex-grow: 1;
+  &__image {
+    padding-right: 8px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 100%;
     min-height: 40px;
     border-bottom: 0.5px solid var(--separator);
   }
+
+  &--button {
+    color: var(--color-accent);
+  }
+
+  &--destructive {
+    color: var(--color-red);
+  }
+
+  &--disabled {
+    color: var(--color-gray-2);
+    cursor: not-allowed;
+  }
 }
 
 // Убираем подчеркивание для последнего элемента в группе
-.mf-group .mf-cell:last-child .mf-cell__in {
+.mf-group .mf-cell:last-child .mf-cell__content {
   border-bottom: none;
 }

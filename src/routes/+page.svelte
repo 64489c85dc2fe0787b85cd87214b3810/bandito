@@ -13,6 +13,7 @@
     HorizontalScroll,
     Background,
     Group,
+    CellButton,
   } from '$lib';
   import { Icon } from '@mftd03/icons';
 
@@ -36,34 +37,32 @@
 <div class="container">
   <Group>
     <Group header="test" footer="kek">
-      <SimpleCell indicator="+7 ••• •• •• 96">
-        {#snippet before()}
-          <Icon set={28} name="phone_outline" />
-        {/snippet}
-        Номер телефона1
-      </SimpleCell>
+      <SimpleCell>Номер телефона1</SimpleCell>
       <SimpleCell indicator="g•••@gmail.com">
-        {#snippet before()}
+        {#snippet image()}
           <Icon set={28} name="phone_outline" />
         {/snippet}
         Email2
       </SimpleCell>
       <SimpleCell indicator="g•••@gmail.com">
-        {#snippet before()}
+        {#snippet image()}
           <Icon set={28} name="phone_outline" />
         {/snippet}
         last
       </SimpleCell>
+      <CellButton>lol</CellButton>
+      <CellButton destructive>des</CellButton>
+      <CellButton disabled>disabled</CellButton>
     </Group>
     <Group>
       <SimpleCell indicator="+7 ••• •• •• 96">
-        {#snippet before()}
+        {#snippet image()}
           <Icon set={28} name="phone_outline" />
         {/snippet}
         Номер телефона
       </SimpleCell>
       <SimpleCell indicator="g•••@gmail.com">
-        {#snippet before()}
+        {#snippet image()}
           <Icon set={28} name="phone_outline" />
         {/snippet}
         Email
@@ -71,13 +70,13 @@
     </Group>
     <Group>
       <SimpleCell indicator="+7 ••• •• •• 96">
-        {#snippet before()}
+        {#snippet image()}
           <Icon set={28} name="phone_outline" />
         {/snippet}
         Номер телефона
       </SimpleCell>
       <SimpleCell indicator="g•••@gmail.com">
-        {#snippet before()}
+        {#snippet image()}
           <Icon set={28} name="phone_outline" />
         {/snippet}
         Email

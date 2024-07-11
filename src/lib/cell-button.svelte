@@ -5,8 +5,8 @@
 
   export type CellButtonProps = DefaultProps & {
     children: Snippet;
-    before?: Snippet;
-    after?: Snippet;
+    destructive?: boolean;
+    disabled?: boolean;
   };
 
   const [ns, bem] = createNamespace('cell');
@@ -15,15 +15,19 @@
 <script lang="ts">
   let {
     children,
-    before,
-    after,
+    disabled,
+    destructive,
     class: className,
-    tag = 'div',
+    tag = 'button',
     ...restProps
   }: CellButtonProps = $props();
 </script>
 
-<svelte:element this={tag} class={cl(ns, className)} {...restProps}>
-  <span class={bem('before')}>{@render before?.()}</span>
-  <span class={bem('in')}>{@render children()}</span>
+<svelte:element
+  this={tag}
+  class={cl(bem({ button: true, disabled, destructive }), className)}
+  {disabled}
+  {...restProps}
+>
+  <span class={bem('content')}>{@render children()}</span>
 </svelte:element>

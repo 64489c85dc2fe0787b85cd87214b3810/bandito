@@ -5,7 +5,7 @@
 
   export type SimpleCellProps = DefaultProps & {
     children: Snippet;
-    before?: Snippet;
+    image?: Snippet;
     after?: Snippet;
   };
 
@@ -15,7 +15,7 @@
 <script lang="ts">
   let {
     children,
-    before,
+    image,
     after,
     class: className,
     tag = 'div',
@@ -24,8 +24,10 @@
 </script>
 
 <svelte:element this={tag} class={cl(ns, className)} {...restProps}>
-  <span class={bem('before')}>{@render before?.()}</span>
-  <span class={bem('in')}>
+  {#if image}
+    <span class={bem('image')}>{@render image()}</span>
+  {/if}
+  <span class={bem('content')}>
     <span>{@render children()}</span>
     <span></span>
   </span>

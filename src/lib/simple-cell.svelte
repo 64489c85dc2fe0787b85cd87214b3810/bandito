@@ -13,8 +13,6 @@
 </script>
 
 <script lang="ts">
-  import CellIcon from './cell-icon.svelte';
-
   let {
     children,
     image,

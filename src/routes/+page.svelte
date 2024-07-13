@@ -40,6 +40,10 @@
 </script>
 
 <div class="container">
+  <FormItem>
+    <Input />
+  </FormItem>
+
   <button onclick={() => (popupShow = true)}>show modal</button>
 
   <Popup bind:show={popupShow} position="center">lol</Popup>

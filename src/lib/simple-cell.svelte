@@ -19,7 +19,6 @@
     children,
     image,
     after,
-    icon,
     class: className,
     tag = 'div',
     ...restProps
@@ -29,9 +28,6 @@
 <svelte:element this={tag} class={cl(ns, className)} {...restProps}>
   {#if image}
     <span class={bem('image')}>{@render image()}</span>
-  {/if}
-  {#if icon}
-    <span class={bem('image')}><CellIcon {...icon} /></span>
   {/if}
   <span class={bem('content')}>
     <span>{@render children()}</span>

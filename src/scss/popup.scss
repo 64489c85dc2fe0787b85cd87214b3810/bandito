@@ -1,0 +1,59 @@
+:root,
+:host {
+  --mf-popup-z-index: 102;
+  --mf-popup-background: #fff;
+  --mf-popup-transition: transform var(--van-duration-base);
+  --mf-popup-round-radius: 16px;
+  --mf-popup-close-icon-size: 22px;
+  --mf-popup-close-icon-color: var(--van-gray-5);
+  --mf-popup-close-icon-margin: 16px;
+  --mf-popup-close-icon-z-index: 1;
+}
+
+.mf-popup {
+  position: fixed;
+  max-height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background: var(--mf-popup-background);
+  transition: var(--mf-popup-transition);
+  -webkit-overflow-scrolling: touch;
+  z-index: 300;
+
+  &--center {
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: -webkit-fit-content;
+    width: fit-content;
+    max-width: calc(100vw - 2 * var(--van-padding-md));
+    margin: 0 auto;
+    transform: translatey(-50%);
+  }
+
+  &--top {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &--bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &--left {
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -50%, 0);
+    height: 100%;
+  }
+
+  &--right {
+    top: 50%;
+    right: 0;
+    transform: translate3d(0, -50%, 0);
+    height: 100%;
+  }
+}

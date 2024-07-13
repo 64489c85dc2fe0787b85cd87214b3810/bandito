@@ -16,6 +16,8 @@
     CellButton,
   } from '$lib';
   import CellIcon from '$lib/cell-icon.svelte';
+  import Modal from '$lib/modal.svelte';
+  import Popup from '$lib/popup.svelte';
   import { Icon } from '@mftd03/icons';
 
   const colors = [
@@ -33,9 +35,16 @@
     'brown',
   ];
   const variants = ['light', 'faded', 'flat', 'solid', 'shadow', 'bordered', 'ghost'];
+
+  let popupShow = $state(false);
 </script>
 
 <div class="container">
+  <button onclick={() => (popupShow = true)}>show modal</button>
+
+  <Popup bind:show={popupShow} position="center">lol</Popup>
+  <Modal bind:open={popupShow}>lol</Modal>
+
   <Avatar size={36} class="gradient-6" initials="ВА" />
   <Group>
     <Group header="test" footer="kek">

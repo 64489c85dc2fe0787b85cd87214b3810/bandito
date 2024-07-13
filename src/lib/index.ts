@@ -1,6 +1,9 @@
 // utils
 export * from './utils';
 
+// actions
+export * from './portal';
+
 // components
 export { default as Accordion } from './accordion.svelte';
 export { default as AccordionItem } from './accordion-item.svelte';
@@ -21,6 +24,7 @@ export { default as Checkbox } from './checkbox.svelte';
 export { default as CheckboxGroup } from './checkbox-group.svelte';
 export { default as Chip } from './chip.svelte';
 export { default as CircularProgress } from './circular-progress.svelte';
+export { default as CloseButton } from './close-button.svelte';
 export { default as DateInput } from './date-input.svelte';
 export { default as DatePicker } from './date-picker.svelte';
 export { default as DateRangePicker } from './date-range-picker.svelte';
@@ -45,9 +49,11 @@ export { default as ModalBody } from './modal-body.svelte';
 export { default as ModalContent } from './modal-content.svelte';
 export { default as ModalFooter } from './modal-footer.svelte';
 export { default as ModalHeader } from './modal-header.svelte';
+export { default as Overlay } from './overlay.svelte';
 export { default as Popover } from './popover.svelte';
 export { default as PopoverContent } from './popover-content.svelte';
 export { default as PopoverTrigger } from './popover-trigger.svelte';
+export { default as Popup } from './popup.svelte';
 export { default as Progress } from './progress.svelte';
 export { default as Radio } from './radio.svelte';
 export { default as RadioGroup } from './radio-group.svelte';
@@ -87,6 +93,7 @@ export type { CheckboxGroupProps } from './checkbox-group.svelte';
 export type { CheckboxProps } from './checkbox.svelte';
 export type { ChipProps } from './chip.svelte';
 export type { CircularProgressProps } from './circular-progress.svelte';
+export type { CloseButtonProps } from './close-button.svelte';
 export type { DateInputProps } from './date-input.svelte';
 export type { DatePickerProps } from './date-picker.svelte';
 export type { DateRangePickerProps } from './date-range-picker.svelte';
@@ -111,9 +118,11 @@ export type { ModalContentProps } from './modal-content.svelte';
 export type { ModalFooterProps } from './modal-footer.svelte';
 export type { ModalHeaderProps } from './modal-header.svelte';
 export type { ModalProps } from './modal.svelte';
+export type { OverlayProps } from './overlay.svelte';
 export type { PopoverContentProps } from './popover-content.svelte';
 export type { PopoverProps } from './popover.svelte';
 export type { PopoverTriggerProps } from './popover-trigger.svelte';
+export type { PopupProps } from './popup.svelte';
 export type { ProgressProps } from './progress.svelte';
 export type { RadioGroupProps } from './radio-group.svelte';
 export type { RadioProps } from './radio.svelte';

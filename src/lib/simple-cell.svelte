@@ -2,13 +2,11 @@
   import { cl, createNamespace } from './utils';
   import type { DefaultProps } from './types';
   import type { Snippet } from 'svelte';
-  import type { CellIconProps } from './cell-icon.svelte';
 
   export type SimpleCellProps = DefaultProps & {
     children: Snippet;
     image?: Snippet;
     after?: Snippet;
-    icon?: CellIconProps;
   };
 
   const [ns, bem] = createNamespace('cell');

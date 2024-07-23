@@ -1,9 +1,6 @@
 export type AlphaMode = 'light' | 'dark';
-
 export type AlphaStyle = 'regular' | 'grouped' | 'vibrant';
-
 export type AlphaFontSize = 'xs' | 's' | 'm' | 'l' | 'xl' | '2xl' | '3xl';
-
 export type AlphaAccent =
   | 'red'
   | 'orange'
@@ -17,41 +14,28 @@ export type AlphaAccent =
   | 'purple'
   | 'pink'
   | 'brown';
-
 export type AlphaDataAttrs = {
-  /**
-   * Управление светлой/темной темой.
-   */
   'data-mode'?: AlphaMode;
-  /**
-   * Управление стилем. Обычный, группированный, вибрация
-   */
   'data-style'?: AlphaStyle;
-  /**
-   * Управление размером текста
-   */
   'data-font-size'?: AlphaFontSize;
-  /**
-   * Управление акцентным цветом
-   */
   'data-accent'?: AlphaAccent;
 };
 
-export type DefaultProps = AlphaDataAttrs & {
-  /**
-   *
-   */
-  tag?: keyof HTMLElementTagNameMap;
-  /**
-   *
-   */
-  class?: string;
-  /**
-   *
-   */
-  style?: string;
-  /**
-   *
-   */
-  [key: string]: unknown;
+export type BanditoAdaptivitySize = 'regular' | 'compact';
+export type BanditoViewWidth = 's-mobile' | 'mobile' | 's-tablet' | 'tablet' | 'desktop';
+export type BanditoViewHeight = 'xs' | 's' | 'm';
+export type BanditoDataAttrs = {
+  'data-size-x'?: BanditoAdaptivitySize;
+  'data-size-y'?: BanditoAdaptivitySize;
+  'data-view-width'?: BanditoAdaptivitySize;
+  'data-view-height'?: BanditoViewHeight;
+  'data-has-pointer'?: 'true' | 'false';
 };
+
+export type DefaultProps = {
+  tag?: keyof HTMLElementTagNameMap;
+  class?: string;
+  style?: string;
+  [key: string]: unknown;
+} & AlphaDataAttrs &
+  BanditoDataAttrs;

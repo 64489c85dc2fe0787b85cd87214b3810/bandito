@@ -1,5 +1,5 @@
 <script>
-  import { FormItem } from '$lib';
+  import { FormItem, FormItemTop, FormItemTopAside, FormItemTopLabel, Input } from '$lib';
 
   let required = $state(false);
 
@@ -10,7 +10,15 @@
 
 <div class="container">
   <button onclick={toggle}>toggle (current: {required})</button>
-  <FormItem {required} topMultiline>lol</FormItem>
+  <FormItem {required} bottom="lol">
+    {#snippet top()}
+      <FormItemTop>
+        <FormItemTopLabel>lol</FormItemTopLabel>
+        <FormItemTopAside>0/100</FormItemTopAside>
+      </FormItemTop>
+    {/snippet}
+    <Input />
+  </FormItem>
 </div>
 
 <style>

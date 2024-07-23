@@ -6,9 +6,23 @@
   }
 }
 
+.mf-text {
+  font-size: var(--font-body-size);
+  line-height: var(--font-body-height);
+  letter-spacing: var(--font-body-spacing);
+  font-weight: var(--font-body-weight);
+}
+
 .mf-subhead {
   font-size: var(--font-subhead-size);
   line-height: var(--font-subhead-height);
   letter-spacing: var(--font-subhead-spacing);
   font-weight: var(--font-subhead-weight);
+}
+
+.mf-footnote {
+  font-size: var(--font-footnote-size);
+  line-height: var(--font-footnote-height);
+  letter-spacing: var(--font-footnote-spacing);
+  font-weight: var(--font-footnote-weight);
 }

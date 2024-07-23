@@ -1,7 +1,4 @@
 <script lang="ts" context="module">
-  import { cl, createNamespace } from './utils';
-  import type { Snippet } from 'svelte';
-
   export type PopoverProps = {
     children: Snippet;
   };
@@ -10,6 +7,9 @@
 </script>
 
 <script lang="ts">
+  import { cl, createNamespace } from './utils';
+  import type { Snippet } from 'svelte';
+
   let { children }: PopoverProps = $props();
 </script>
 

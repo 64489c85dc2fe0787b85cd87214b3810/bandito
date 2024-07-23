@@ -1,11 +1,13 @@
-:root,
-:host {
-  --form-item-top: 6px;
-}
-
 .mf-form-item {
   display: block;
+  padding: 12px;
 
+  // modifiers
+  &--noPadding {
+    padding: 0;
+  }
+
+  // elements
   &__top {
     align-items: flex-end;
     color: var(--label-2);
@@ -33,5 +35,8 @@
   &__top-aside {
     color: var(--label-3);
     margin-left: auto;
+  }
+
+  &__bottom {
   }
 }

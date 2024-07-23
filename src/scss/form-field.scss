@@ -1,0 +1,45 @@
+.mf-form-field {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  font-family: var(--fontFamily-sans);
+  min-height: var(--form-field-height);
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: var(--border-radius);
+  isolation: isolate;
+
+  // variants
+  &--regular {
+    --form-field-border-color: var(--form-field-border-regular);
+    background-color: var(--form-field-background-regular);
+  }
+
+  &--plain {
+  }
+
+  // status
+  &--initial {
+  }
+
+  &--error {
+    background-color: var(--form-field-background-error);
+  }
+
+  &--valid {
+  }
+
+  // elements
+  &__border {
+    border: var(--border-width-regular) solid var(--form-field-border-color, transparent);
+    border-radius: inherit;
+    box-sizing: border-box;
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform-origin: left top;
+    width: 100%;
+  }
+}

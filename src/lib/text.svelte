@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
-  export type SubheadProps = TypographyProps & {};
+  export type TextProps = TypographyProps & {};
 
-  const [ns] = createNamespace('subhead');
+  const [ns] = createNamespace('text');
 </script>
 
 <script lang="ts">
@@ -16,7 +16,7 @@
     normalize = true,
     inline = false,
     ...restProps
-  }: SubheadProps = $props();
+  }: TextProps = $props();
 </script>
 
 <svelte:element this={tag} class={tcl({ normalize, inline, weight }, ns, className)} {...restProps}

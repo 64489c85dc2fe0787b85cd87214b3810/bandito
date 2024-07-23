@@ -1,0 +1,25 @@
+.mf-unstyled-text-field {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  resize: none;
+}
+
+.mf-input {
+  &__el {
+    border-radius: inherit;
+    box-sizing: border-box;
+    color: var(--label-1);
+    height: var(--form-field-height);
+    padding: 0 12px;
+    position: relative;
+    width: 100%;
+    z-index: var(--z-index-form-field-element);
+  }
+}

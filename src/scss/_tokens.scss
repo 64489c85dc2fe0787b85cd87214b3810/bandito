@@ -1,0 +1,36 @@
+:root,
+:host {
+  --border-width-regular: 0.5px;
+  --border-radius-compact: 10px;
+  --border-radius-regular: 10px;
+
+  // form field
+  --form-field-height-regular: 44px;
+  --form-field-height-compact: 36px;
+  --form-field-background-regular: #f7f8fa;
+  --form-field-background-hover: #f7f8fa;
+  --form-field-background-active: #f7f8fa;
+  --form-field-border-regular: rgba(0, 0, 0, 0.12);
+  --form-field-border-hover: rgba(0, 0, 0, 0.12);
+  --form-field-border-active: rgba(0, 0, 0, 0.12);
+
+  // z-index
+  --z-index-form-field-element: 1;
+  --z-index-form-field-border: 2;
+  --z-index-form-field-status: 3;
+  --z-index-form-field-border_hover: 4;
+  --z-index-form-field-focus: 5;
+  --z-index-form-field-side: 6;
+}
+
+[data-size-y="regular"] {
+  --border-radius: var(--border-radius-regular);
+
+  --form-field-height: var(--form-field-height-regular);
+}
+
+[data-size-y="compact"] {
+  --border-radius: var(--border-radius-compact);
+
+  --form-field-height: var(--form-field-height-compact);
+}

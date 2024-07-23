@@ -38,12 +38,7 @@
 </script>
 
 <div class={ns} style="background: {set[1]}">
-  <canvas
-    class={bem('filling')}
-    bind:this={el}
-    width={50}
-    height={50}
-    data-colors={set.join(',')}
-  />
+  <canvas class={bem('filling')} bind:this={el} width={50} height={50} data-colors={set.join(',')}
+  ></canvas>
   <div class={bem('pattern')}></div>
 </div>

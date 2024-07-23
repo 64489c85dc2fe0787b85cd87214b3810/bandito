@@ -1,14 +1,13 @@
 <script lang="ts" context="module">
-  export type FormItemStatus = 'default' | 'error' | 'valid';
-
-  export type FormItemProps = {
+  export type FormItemProps = DefaultProps & {
     children: Snippet;
     top?: Snippet | string;
     bottom?: Snippet | string;
-    status?: FormItemStatus;
+    status?: FormFieldStatus;
     required?: boolean;
     topMultiline?: boolean;
     removable?: boolean | 'indent';
+    noPadding?: boolean;
   };
 
   export type FormItemContext = {
@@ -18,18 +17,30 @@
 
   export const CONTEXT_KEY = 'form-item';
 
-  export const [formItemNs, formItemBem] = createNamespace('form-item');
+  export const [, formItemBem] = createNamespace('form-item');
 </script>
 
 <script lang="ts">
-  import { createNamespace } from './utils';
-  import FormItemTop from './form-item-top.svelte';
-  import FormItemTopAside from './form-item-top-aside.svelte';
-  import FormItemTopLabel from './form-item-top-label.svelte';
+  import { cl, createNamespace } from './utils';
   import { setContext, type Snippet } from 'svelte';
-  import Subhead from './subhead.svelte';
+  import Footnote from './footnote.svelte';
+  import FormItemTop from './form-item-top.svelte';
+  import FormItemTopLabel from './form-item-top-label.svelte';
+  import type { DefaultProps } from './types';
+  import type { FormFieldStatus } from './form-field.svelte';
 
-  let { children, top, bottom, required = false, topMultiline = false }: FormItemProps = $props();
+  let {
+    children,
+    top,
+    bottom,
+    status,
+    required = false,
+    topMultiline = false,
+    noPadding,
+    tag = 'div',
+    class: className,
+    ...restProps
+  }: FormItemProps = $props();
 
   setContext(CONTEXT_KEY, {
     get required() {
@@ -41,11 +52,22 @@
   });
 </script>
 
-<div class={formItemNs}>
-  <FormItemTop>
-    <FormItemTopLabel>lol</FormItemTopLabel>
-    <FormItemTopAside>kek</FormItemTopAside>
-  </FormItemTop>
+<svelte:element this={tag} class={cl(formItemBem({ noPadding }), className)} {...restProps}>
+  {#if top}
+    {#if typeof top === 'string'}
+      <FormItemTop>
+        <FormItemTopLabel>{top}</FormItemTopLabel>
+      </FormItemTop>
+    {:else}
+      {@render top()}
+    {/if}
+  {/if}
+
   {@render children()}
-  <Subhead class={formItemBem('bottom')}>test</Subhead>
-</div>
+
+  {#if bottom}
+    <Footnote class={formItemBem('bottom')} role={status === 'error' ? 'alert' : undefined}
+      >{#if typeof bottom === 'string'}{bottom}{:else}{@render bottom()}{/if}</Footnote
+    >
+  {/if}
+</svelte:element>

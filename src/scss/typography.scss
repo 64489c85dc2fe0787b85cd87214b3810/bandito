@@ -1,0 +1,14 @@
+.mf-typography {
+  &--normalize {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.mf-subhead {
+  font-size: var(--font-subhead-size);
+  line-height: var(--font-subhead-height);
+  letter-spacing: var(--font-subhead-spacing);
+  font-weight: var(--font-subhead-weight);
+}

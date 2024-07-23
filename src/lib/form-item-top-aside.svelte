@@ -1,13 +1,13 @@
 <script lang="ts" context="module">
-  import type { Snippet } from 'svelte';
-
-  export type FormItemTopAsideProps = {
-    children: Snippet;
-  };
+  export type FormItemTopAsideProps = SubheadProps & {};
 </script>
 
 <script lang="ts">
-  let { children }: FormItemTopAsideProps = $props();
+  import { cl } from './utils';
+  import Subhead, { type SubheadProps } from './subhead.svelte';
+  import { formItemBem } from './form-item.svelte';
+
+  let { class: className, ...restProps }: FormItemTopAsideProps = $props();
 </script>
 
-{@render children()}
+<Subhead class={cl(formItemBem('top-aside'), className)} {...restProps} />

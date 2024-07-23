@@ -14,10 +14,13 @@
     ['#e99d57', '#eed171', '#ee9d68', '#e0d07e'],
     ['#40cdde', '#ac86ed', '#e984d8', '#efd359'],
   ];
+
+  const [ns, bem] = createNamespace('background');
 </script>
 
 <script lang="ts">
   import { TWallpaper } from './background-wallpaper';
+  import { createNamespace } from './utils';
 
   let { color = 0 }: BackgroundProps = $props();
 
@@ -34,13 +37,13 @@
   // style="background: linear-gradient(29.61deg, {set[2]} 3.79%, {set[3]} 22.08%, {set[1]} 51.88%, {set[0]} 82.65%)"
 </script>
 
-<div class="mf-background" style="background: {set[1]}">
+<div class={ns} style="background: {set[1]}">
   <canvas
-    class="mf-background__filling"
+    class={bem('filling')}
     bind:this={el}
     width={50}
     height={50}
     data-colors={set.join(',')}
-  ></canvas>
-  <div class="mf-background__pattern"></div>
+  />
+  <div class={bem('pattern')}></div>
 </div>

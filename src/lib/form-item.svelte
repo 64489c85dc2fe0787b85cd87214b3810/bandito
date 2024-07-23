@@ -18,7 +18,7 @@
 
   export const CONTEXT_KEY = 'form-item';
 
-  const [ns, bem] = createNamespace('form-item');
+  export const [formItemNs, formItemBem] = createNamespace('form-item');
 </script>
 
 <script lang="ts">
@@ -27,6 +27,7 @@
   import FormItemTopAside from './form-item-top-aside.svelte';
   import FormItemTopLabel from './form-item-top-label.svelte';
   import { setContext, type Snippet } from 'svelte';
+  import Subhead from './subhead.svelte';
 
   let { children, top, bottom, required = false, topMultiline = false }: FormItemProps = $props();
 
@@ -40,10 +41,11 @@
   });
 </script>
 
-<div class={ns}>
+<div class={formItemNs}>
   <FormItemTop>
     <FormItemTopLabel>lol</FormItemTopLabel>
     <FormItemTopAside>kek</FormItemTopAside>
   </FormItemTop>
   {@render children()}
+  <Subhead class={formItemBem('bottom')}>test</Subhead>
 </div>

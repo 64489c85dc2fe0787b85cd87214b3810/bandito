@@ -1,3 +1,37 @@
+:root,
+:host {
+  --form-item-top: 6px;
+}
+
 .mf-form-item {
   display: block;
+
+  &__top {
+    align-items: flex-end;
+    color: var(--label-2);
+    display: flex;
+    padding-bottom: 8px;
+    padding-top: 2px;
+  }
+
+  &__top-label,
+  &__top-aside {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__top-label {
+    flex: 1;
+
+    &--required {
+      color: var(--color-red);
+      margin-left: 3px;
+    }
+  }
+
+  &__top-aside {
+    color: var(--label-3);
+    margin-left: auto;
+  }
 }

@@ -1,0 +1,14 @@
+:root,
+:host {
+  --mf-overlay-z-index: 1;
+}
+
+.mf-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--mf-overlay-z-index);
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-default);
+}

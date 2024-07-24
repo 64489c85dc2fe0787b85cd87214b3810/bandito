@@ -9,36 +9,26 @@ function toCamelCase(str) {
     .join('');
 }
 
-const components = new Bun.Glob('./src/lib/*.svelte');
+const basedir = './src/lib';
+const glob = new Bun.Glob(`${basedir}/**/*.{svelte,scss}`);
 
-const list: Array<{ componentName: string; fileName: string }> = [];
+const js: string[] = [];
+const scss: string[] = [];
 
-for await (const path of components.scan('.')) {
-  const { name: fileName } = parse(path);
-  const componentName = fileName.split('-').map(toCamelCase).join('');
-  list.push({ componentName, fileName });
+for await (const path of glob.scan('.')) {
+  const { ext, name } = parse(path);
+  const filepath = path.substring(basedir.length + 1);
+
+  if (ext === '.svelte') {
+    const componentName = name.split('-').map(toCamelCase).join('');
+    js.push(`export { default as ${componentName} } from './${filepath}';`);
+  }
+
+  if (ext === '.scss') {
+    scss.push(`@import "${filepath}";`);
+  }
 }
 
-list.sort((a, b) => a.componentName.localeCompare(b.componentName));
-
-const exports = [];
-
-for (const el of list) {
-  exports.push(`export { default as ${el.componentName} } from './${el.fileName}.svelte';`);
-}
-
-console.log(exports.join('\n'));
-
-const styles = new Bun.Glob('./src/scss/*.scss');
-const sList: string[] = [];
-for await (const path of styles.scan('.')) {
-  const { name: fileName } = parse(path);
-  sList.push(fileName);
-}
-
-const scss = sList
-  .sort()
-  .map((s) => `@import "${s}";`)
-  .join('\n');
-
-console.log(scss);
+console.log(js.sort().join('\n'));
+console.log();
+console.log(scss.sort().join('\n'));

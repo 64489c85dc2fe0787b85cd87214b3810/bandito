@@ -1,0 +1,60 @@
+.mf-cell-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  width: 24px;
+  max-width: 24px;
+  min-height: 24px;
+  height: 24px;
+  max-height: 24px;
+  border-radius: 4px;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.mf-cell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 16px;
+  gap: 4px;
+  cursor: pointer;
+  width: 100%;
+  color: var(--label-1);
+
+  &:not(.mf-cell--disabled):hover {
+    background-color: var(--fill-3);
+  }
+
+  &__image {
+    padding-right: 8px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    min-height: 44px;
+    border-bottom: 1px solid var(--separator);
+  }
+
+  &--button {
+    color: var(--color-accent);
+  }
+
+  &--destructive {
+    color: var(--color-red);
+  }
+
+  &--disabled {
+    color: var(--color-gray-2);
+    cursor: not-allowed;
+  }
+}
+
+// Убираем подчеркивание для последнего элемента в группе
+.mf-group .mf-cell:last-child .mf-cell__content {
+  border-bottom: none;
+}

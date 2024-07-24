@@ -12,12 +12,11 @@
     SimpleCell,
     HorizontalScroll,
     Background,
+    CellIcon,
     Group,
     CellButton,
+    Popup,
   } from '$lib';
-  import CellIcon from '$lib/cell-icon.svelte';
-  import Modal from '$lib/modal.svelte';
-  import Popup from '$lib/popup.svelte';
   import { Icon } from '@mftd03/icons';
 
   const colors = [
@@ -47,7 +46,6 @@
   <button onclick={() => (popupShow = true)}>show modal</button>
 
   <Popup bind:show={popupShow} position="center">lol</Popup>
-  <Modal bind:open={popupShow}>lol</Modal>
 
   <Avatar size={36} class="gradient-6" initials="ВА" />
   <Group>

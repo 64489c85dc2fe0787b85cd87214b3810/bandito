@@ -1,0 +1,21 @@
+:root,
+:host {
+  --mf-nav-bar-height: 46px;
+  --mf-nav-bar-background: var(--van-background-2);
+  --mf-nav-bar-arrow-size: 16px;
+  --mf-nav-bar-icon-color: var(--van-primary-color);
+  --mf-nav-bar-text-color: var(--van-primary-color);
+  --mf-nav-bar-title-font-size: var(--van-font-size-lg);
+  --mf-nav-bar-title-text-color: var(--van-text-color);
+  --mf-nav-bar-z-index: 1;
+  --mf-nav-bar-disabled-opacity: var(--van-disabled-opacity);
+}
+
+.mf-navbar {
+  position: relative;
+  z-index: var(--van-nav-bar-z-index);
+  line-height: var(--van-line-height-lg);
+  text-align: center;
+  background: var(--van-nav-bar-background);
+  user-select: none;
+}

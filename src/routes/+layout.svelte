@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Background } from '$lib';
-  import '../scss/_index.scss';
+  import '$lib/index.scss';
 
   let { children } = $props();
 </script>
